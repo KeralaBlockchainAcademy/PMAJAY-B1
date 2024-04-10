@@ -3,7 +3,7 @@
 **
 mkdir HTML
 
-cd HTML
+`cd HTML`
 
 touch sample.html
 
