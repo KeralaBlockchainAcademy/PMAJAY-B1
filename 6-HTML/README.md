@@ -1,7 +1,7 @@
 
 **Day 6**
 
-mkdir HTML
+`mkdir HTML`
 
 `cd HTML`
 
