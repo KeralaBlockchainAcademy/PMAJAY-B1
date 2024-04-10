@@ -5,6 +5,6 @@ mkdir HTML
 
 `cd HTML`
 
-touch sample.html
+`touch sample.html`
 
-gedit sample.html
+`gedit sample.html`
