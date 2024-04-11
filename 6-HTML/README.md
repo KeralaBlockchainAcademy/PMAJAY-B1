@@ -26,6 +26,6 @@
 1. Create a folder and html page
 2. Create Heading
 3. Write a paragraph about yourself
-4. the HTML tag for displaying scrollable text and demonstrate its application.
+4. Find out the HTML tag for displaying scrollable text and demonstrate its application.
 
 
