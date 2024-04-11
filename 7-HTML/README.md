@@ -1,6 +1,6 @@
 **HTML - Part II**
 
-** Centre align `<center>`**
+**Center align `<center>`**
 
 HTML `<center>` tag in HTML is used to set the alignment of text into the center. This tag is not supported in HTML5. CSS’s property is used to set the alignment of the element instead of the center tag in HTML5.
 
@@ -47,7 +47,50 @@ Reserved characters in HTML must be replaced with entities:
 
  To insert a horizontal rule or a thematic break in an HTML page
  
-'<hr>'
+`<hr>`
+
+**Image `<img>`**
+
+HTML `<img>` tag is used to display image on the web page.
+
+`<img src="" alt="" width="" height="">`
+
+
+**Attributes**
+
+Attributes usually use the following syntax: 
+
+`<tag attribute="value of attribute">content</tag>`
+
+Some of the most commonly used attributes are: align, bgcolor, src, height, width, value, href, hspace, id, class, style, title, dir, lang etc.
+
+**Comment `<!--...-->`**
+
+Comments are some text or code written in your code to give an explanation about the code, and not visible to the user. You can add comments in your HTML file using `<!-- ... -->` tag. 
+
+**Anchor `<a>`**
+
+The `<a>` tag defines a hyperlink, which is used to link from one page to another. By default, links will appear as follows in all browsers:
+
+An unvisited link is underlined and blue
+A visited link is underlined and purple
+An active link is underlined and red
+
+`<a href="https://kba.ai">KBA Website</a> `
+
+**Preserve Formatting `<pre>`**
+
+`<pre>` tag can be used to preserve formatting. It maintains both space and line break.
+
+
+
+**Exercise-2**
+1. Find out the tag used to get the output as:
+   This is <del>not</del> needed.
+2. Give a new look and feel for the portfolio website, include images, links, bgcolor etc
+3. Familiarize yourself with the following tags and include them in your web page - Superscript Text (`<sup>`), Subscript Text (`<sub>`), article, audio, canvas, nav and embed tags
+
+Submit this before **15-Apr-2024, 9.45am**
 
 
 
