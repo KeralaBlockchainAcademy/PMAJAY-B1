@@ -39,8 +39,19 @@ The HTML `<u>`tag stands for underline which helps to underline the text enclose
 
 Reserved characters in HTML must be replaced with entities:
 
-< (less than) = `&lt;`
-> (greather than) = `&gt;`
+`<` (less than) = `&lt;`
+
+`>` (greather than) = `&gt;`
+
+**Horizontal Line `<hr>`**
+
+ To insert a horizontal rule or a thematic break in an HTML page
+ 
+'<hr>'
+
+
+
+
 
 
 
