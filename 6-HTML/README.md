@@ -9,6 +9,18 @@
 
 `gedit sample.html`
 
+**KBA Website**
+
+`cd ..`
+
+`mkdir KBA_Website`
+
+`cd KBA_Website`
+
+`touch home.html`
+
+
+
 **Exercise 1 - Portfolio website**
 
 1. Create a folder and html page
