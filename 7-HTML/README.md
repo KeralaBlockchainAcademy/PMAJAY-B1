@@ -97,10 +97,20 @@ An active link is underlined and red
 1. Find out the tag used to get the output as:
    
    This is <del>not</del> needed.
-2. Give a new look and feel for the portfolio website, include images, links, bgcolor etc
+2. Give a new look and feel for the portfolio website, include images, links, bgcolor, background image etc
 3. Familiarize yourself with the following tags and include them in your web page - Superscript Text (`<sup>`), Subscript Text (`<sub>`), article, audio, canvas, nav and embed tags
 
 Submit this before **15-Apr-2024, 9.45am**
+
+**References**
+
+https://www.javatpoint.com/html-tutorial
+
+https://www.geeksforgeeks.org/html-tutorial
+
+https://www.w3schools.com/html/default.asp
+
+
 
 
 
