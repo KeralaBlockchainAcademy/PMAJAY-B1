@@ -97,8 +97,7 @@ An active link is underlined and red
 1. Find out the tag used to get the output as:
    
    This is <del>not</del> needed. <br>
-   This is an <mark>important</mark> text.
-   
+2. Find out the tag to highlight the text.   
 3. Give a new look and feel for the portfolio website, include images, links, bgcolor, background image etc
 4. Familiarize yourself with the following tags and include them in your web page - Superscript Text (`<sup>`), Subscript Text (`<sub>`), article, audio, canvas, nav and embed tags
 
