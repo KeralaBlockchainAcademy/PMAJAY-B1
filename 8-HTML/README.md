@@ -3,7 +3,7 @@
 **Exercice-3**
 
 1. Try out file upload option in the form
-2. Try out the TableLayout as shown in the image(TableLayout.png)
+2. Try out the TableLayout as shown in the image(TableLayoutNew.png)
 3. Modify the portfolio page to include a table to list the educational qualifications or experience
 4. Include a page to share a message with you by submitting a form
 5. List the hobbies/interests/passion
