@@ -42,10 +42,12 @@ To display a table with borders, you will use the `border` attribute.
 
 **Headings** in a table are defined with the `<th>` tag.
 
-```<tr>
+```
+<tr>
 <th>Heading1</th>
 <th>Heading2</th>
-</tr>```
+</tr>
+```
 
 **Cellspacing** is the pixel width between the individual data cells in the table (The thickness of the lines making the table grid). The default is zero. If the border is set at 0, the cellspacing lines will be invisible. 
 
@@ -61,7 +63,8 @@ The **width** attribute can be used to define the width of your table. It can be
 
 You will use **colspan** attribute if you want to merge two or more columns into a single column. Similar way you will use **rowspan** if you want to merge two or more rows.
 
-```<table border="1">
+```
+<table border="1">
 <tr>
 <th>Column 1</th>
 <th>Column 2</th>
@@ -71,7 +74,8 @@ You will use **colspan** attribute if you want to merge two or more columns into
 3</td></tr>
 <tr><td>Row 2 Cell 2</td><td>Row 2 Cell 3</td></tr>
 <tr><td colspan="3">Row 3 Cell 1</td></tr>
-</table>```
+</table>
+```
 
 
 
