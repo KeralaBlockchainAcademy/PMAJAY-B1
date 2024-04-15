@@ -172,7 +172,7 @@ We can apply styling to our HTML inside individual HTML tags with inline styling
 
 `<input type="submit" name="submit" value="Submit" style="color:blue">`
 
-We can have as many property-value pairs as we want as long as we separate them with a semicolon (;).
+We can have as many property-value pairs as we want as long as we separate them with a semicolon (;). Commonly used properties are background-color, color, font-family, font-size, text-align etc.
 
 **Lists**
 
