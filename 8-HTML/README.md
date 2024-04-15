@@ -87,7 +87,7 @@ All forms start with the `<FORM>` tag and end with `</FORM>`. All other form obj
 </form
 ```
 
-The form tag has two main properties: **METHOD** and **ACTION**. METHOD refers to **post** or **get**. The post attribute will send the information from the form as a text document. The get attribute is used mostly with search engines, and will not be discussed. We will generally set METHOD="post". ACTION usually specifies the location of the CGI script that will process the form data
+The form tag has two main properties: **METHOD** and **ACTION**. METHOD refers to **post** or **get**. The post attribute will send the information from the form as a text document. The get attribute is used mostly with search engines. We will generally set METHOD="post". ACTION usually specifies the location of the CGI script that will process the form data
 
 **Text Field**
 
