@@ -111,8 +111,8 @@ This is also a single-line text input but it masks the character as soon as a us
 
 Attributes are type, name, value, size, maxlength
 
-**Text Area
-**
+**Text Area**
+
 This is used when the user is required to give details that may be longer than a single sentence. Multi-line input controls are created using HTML `<textarea>` tag.
 
 `<textarea rows="5" cols="50" name="address"> </textarea>`
