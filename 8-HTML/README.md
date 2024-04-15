@@ -23,7 +23,8 @@ Submit before **17-Apr-2024, 9.45am**
 The HTML tables are created using the `<table>` tag in which the `<tr>` tag is used to create
 table rows and `<td>` tag is used to create data cells. 
 
-<pre>```<table>
+```
+<table>
 <tr>
 <td>Row 1, Column 1</td>
 <td>Row 1, Column 2</td>
@@ -32,7 +33,8 @@ table rows and `<td>` tag is used to create data cells.
 <td>Row 2, Column 1</td>
 <td>Row 2, Column 2</td>
 </tr>
-</table>```</pre>
+</table>
+```
 
 To display a table with borders, you will use the `border` attribute.
 
