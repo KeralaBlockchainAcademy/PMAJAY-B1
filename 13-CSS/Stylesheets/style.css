@@ -72,3 +72,19 @@ table,td,th,tr{
 td{
     padding: 5px;
 }
+.navBar{
+    display: flex;
+    list-style-type: none;
+    padding: 15px;
+    gap:5px;
+    background-color: chartreuse;
+    
+}
+li a:hover{
+    color: #803D3B;
+}
+li a{
+    text-decoration: none;
+    padding-left: 15px;
+}
+
