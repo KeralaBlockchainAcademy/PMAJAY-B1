@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="dark:bg-black dark:text-white "> <!-- setting to dark mode. use  mozilla browser settings to view output-->
+
+  <h1 class="text-3xl  underline text-blue-600	text-center	font-extrabold			">
+    <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+         Tailwind CSS
+      </span>
+    
+  </h1>
+  <div class=" dark:bg-white text-black bg-clip-padding border border-indigo-500  p-8  m-3 bg-red-200	" >
+  <p class="text-center m-2 underline decoration-2 decoration-wavy		decoration-red-400 text-lime-900 uppercase	" >Welcome to Tailwind</p>
+  <p> <img src="./Images/Tailwind.png" class="brightness-100	aspect-square		w-min float-right hover:float-left	"> </p>
+  <p class="text-justify	">Tailwind CSS is an open source CSS framework. The main feature of this library is that, unlike other CSS frameworks like Bootstrap, it does not provide a series of predefined classes for elements such as buttons or tables. 
+    Tailwind is developer friendly styling library.</p>
+    <a href="https://en.wikipedia.org/wiki/Tailwind_CSS" class="text-blue-600 hover:text-red-600 ">Wikipedia<br></a>
+    
+    <button type="button"onclick="alert('Successfully saved!')" class="m-20	bg-slate-200 p-1  outline outline-offset-4 outline-yellow-200 rounded-full">Save Changes</button>
+    <br>
+
+
+</div>
+<div class="m-2">
+<p class="tracking-wide	">Choose Your Favorite Styling Method</p>
+<form action="/sample.html">
+     <input type="radio" id="css" name="fav_Style" value="CSS">
+     <label for="css">CSS</label><br>
+     <input type="radio" id="tail" name="Fav_Style" value="Tailwind"class="focus:ring-2">
+     <label for="tail">Tailwind</label><br>
+     <input type="radio" id="bootstrap" name="fav_Style" value="Bootstrap"class="hover:ring-4 ">
+     <label for="bootstrap">Bootstrap</label> <br>
+     <input type="submit" class="m-12 ring-4 ring-pink-300 " value="Submit">
+
+    </form> 
+
+</div>
+
+<p class="italic text-xl"> See also</p>
+<ul class="m-6 list-disc columns-2">
+  
+  <a href="https://en.wikipedia.org/wiki/CSS_framework"class="text-blue-600 underline" ><li> CSS Framework</li></a>
+  <a href="https://en.wikipedia.org/wiki/JQuery_Mobile"class="text-blue-600 underline"> <li> JQuery Mobile</li></a>
+  <p class="break-after-column	"> Continue to Next column</p>
+  <a href="https://en.wikipedia.org/wiki/Web_framework"class="text-blue-600 underline"> <li> Javascript Framework</li></a>
+  <a href="https://en.wikipedia.org/wiki/JavaScript_library"class="text-blue-600 underline"> <li> Javascript Library</li></a>
+  <a href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)"class="text-blue-600 underline"> <li> Bootstrap</li></a>
+
+
+
+
+</ul>
+<div class="m-3">
+
+  <img src="/Images/adam.jpeg" class="object-left object-scale-down hover:object-fill h-48 w-96	"></img>
+  <p> Adam Wathan, Tailwind Creator</p>
+</div>
+</div>
+
+
+<div class="aspect-w-16 aspect-h-9">
+  <iframe src="https://www.youtube.com/embed/bxmDnn7lrnk" > </iframe>
+</div>
+
+
+    
+</body>
+</html>
