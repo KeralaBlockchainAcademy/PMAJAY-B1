@@ -202,3 +202,22 @@ Changed the branch to conflict and edited this content to - helloooooo
 And comitted to conflict branch
 
 Now when we merge this merge conflict occurs. 
+
+## Resources
+
+- https://www.freecodecamp.org/news/what-is-git-learn-git-version-control/
+
+- https://git-scm.com/docs
+
+- https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
+
+- https://code.visualstudio.com/docs/sourcecontrol/intro-to-git#_open-a-github-repository-in-a-codespace
+
+- https://www.freecodecamp.org/news/git-and-github-for-beginners/
+
+- https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts
+
+- https://www.freecodecamp.org/news/resolve-merge-conflicts-in-git-a-practical-guide/
+
+- https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls
+
