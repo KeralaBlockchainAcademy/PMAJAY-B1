@@ -8,22 +8,23 @@
 <body>
     <h2> Javascript Operators</h2>
     <p id="demo"></p>
-
+    <p id="dem"></p>
+    <p> Increment Operators</p>
     <p id="de"></p>
     <script>
         let a=1;
         let b=5;
         a+=b;
-        document.getElementById("demo").innerHTML="Result is: "+ a
+        document.getElementById("demo").innerHTML="Sum is: "+ a
 
         let x='5';
         let y=5;
         z=(x==y)
-        document.write("Is X equal to Y: ",z)
+        document.getElementById("dem").innerHTML="Is X Equal Y: "+ z
 
 
         let s=6;
-        document.getElementById("de").innerHTML="Before Increment: "+s+"<br>After Increment: "+(++s)
+        document.getElementById("de").innerHTML="<br>Before Increment: "+s+"<br>After Increment: "+(++s)
 
 
 
@@ -31,14 +32,20 @@
         document.write(`<br><br>Before Increment values of   C=${c} &nbsp &nbsp P =${p}`);
         d=++c;
         f=p++;
-        document.write("<br><br>Preincrement operation:",d)
-        document.write("<br><br>Postincrement operation:",p)
+        document.write("<br><br>Preincrement operation:",d)// value of c=7
+        document.write("<br><br>Postincrement operation:",f)//value of p=7
+        //Logical Operation
+        document.write("<br><br>Logical Operation")
         let e=2,r=3,t=5,n=4;
         m=(e<r)&& (t<n)
+        document.write("<br><br>Logical AND Operation: ",m)
+        //Bitwise operation
         u=5,v=1;
         j=u&v;
-        document.write("<br><br>Bitwise And:",j)
-        document.write("<br><br>Logical Operation: ",m)
+        document.write("<br><br>Bitwise AND:",j)
+
+
+        
 
 
 
