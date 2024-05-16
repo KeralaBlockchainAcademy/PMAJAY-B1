@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            //012345
+        let x="Mowgli is the human character on Jungle book";
+        document.write("The String:",x);
+        document.write("<br>The length of the string is:",x.length);
+        document.write("<br>Character at third position is:", x.at(2));
+        document.write("<br>My String in Uppercase", x.toUpperCase());
+        document.write("<br>My string in Lower case", x.toLowerCase());
+        let a="New";
+        let b="year";
+        a=a.concat(" ",b);
+        document.write("<br>MEssage:",a)
+        document.write("<br>",a.repeat(5)) ;
+        let n="I like icecream and I like to sleep";
+        document.write("<br>Slice it:",n.slice(2,6)) 
+        document.write(n.replace(/like/g,"don't like")) ;
+        // n.search(/like/g);
+        let y="https://www.kba.ai";
+        let g= y.split(".")
+        document.write("<br>The splits:",g) ;
+        let k="10";
+        let l="20";
+        // let sum= k+l;
+        let u = Number.parseInt(k);
+        let v= Number.parseInt(l);
+        document.write("<br>The sum is:",u+v);
+    </script>
+</body>
+</html>

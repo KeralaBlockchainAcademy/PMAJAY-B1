@@ -89,11 +89,13 @@ li a{
     padding-left: 15px;
 }
 .coloumn{
-    width: 33.33%;
-    height: 450px;
     float: left;
-    padding-left: 15px;
-    
+}
+.coloumn.side{
+    width:25%
+}
+.coloumn.main{
+    width:50%
 }
 .row:after{
     content: "";
