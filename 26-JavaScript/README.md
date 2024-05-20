@@ -20,3 +20,4 @@ Pop one element from list
 Delete the least interseted film from list
 Make a different array from 3rd position to 6th position
 Find the position of film acted by your favourite actor
+check avesham on list
