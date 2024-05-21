@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter your first name:
+    <input id="text"  >
+    Enter your last name:
+    <input id="text1"  >
+    <button onclick="textC()">Click Here</button>
+    Entered Name:
+    <p id="demo"></p>
+    <script>
+        
+        function textC(){
+        let x= document.getElementById("text").value;
+       
+        let y=document.getElementById("text1").value;
+        z=x+" "+y;
+        document.getElementById("demo").innerHTML=z;
+        }
+    </script>
+</body>
+</html>
