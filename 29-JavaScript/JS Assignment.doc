@@ -1,20 +1,20 @@
  
-//Program to swap two numbers w/o using temporary variable
+A) Program to swap two numbers w/o using temporary variable
 
 Values should be taken from text box & printed on screen on a button click(Function)
 
-
+Function
+********
 Program to find square of a number
 Program to find cube of a number
-
 Program to find simple interest & compound interest
 
 
 Program to enter the list of fruits in an array and  upon reading a value from a dropdown box . Print the fruit on that index
-Program to enter the list of Students in an array and upon reading a value from text box. Print the name of student on screen
+A) to enter the list of Students in an array and upon reading a value from text box. Print the name of student on screen
 Program to enter a personal details(roll no.,name,class,address) of a student as an object and print the values using key.
-Program to enter the username & password as keys to an object through text box and store the username and password in window local storage. An alert box saying “Username registered successfully.” Another Login page , asking for username & password  and check valid user or not.(only  after if-else)
-Program to enter name, film,no. of tickets as key to an object from a text box and a button for submit and there should be a ticket template like “Name booked no. of tickets for film” and autogenerate ticket on submitting the button.
+A)Program to enter the username & password as keys to an object through text box and store the username and password in window local storage. An alert box saying “Username registered successfully.” Another Login page , asking for username & password  and check valid user or not.(only  after if-else)
+A)Program to enter name, film,no. of tickets as key to an object from a text box and a button for submit and there should be a ticket template like “Name booked no. of tickets for film” and autogenerate ticket on submitting the button.
 
 
-Make the calculator dynamic
+A)Make the calculator dynamic
