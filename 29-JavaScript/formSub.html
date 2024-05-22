@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .textArea{
+            height:30px;
+            width: 600px;;
+        }
+    </style>
+    <script src="./formApp.js"> </script>
+</head>
+<body>
+    
+    <form>
+        <div style="background-color: cadetblue; display:grid;height: 500px;width: 700px;border-width: 1px ;border-style:groove;border-color: dimgrey; margin: auto;padding: 20px;">
+        <label for="id">Enter Certficate Id</label>
+        <input  class="textArea" type="text" id="id">
+        <label for="name">Enter your Name: </label>
+        <input class="textArea" type="text" id="name">
+        <label for="course">Course Done: </label>
+        <select class="textArea" id="course">
+            <option  value="">Select Course</option>
+            <option  value="Certified Ethereum Developer">Certified Ethereum Developer</option>
+            <option  value="Certified Blockchain Associate">Certified Blockchain Associate</option>
+            <option  value="Certified Hyperledger Developer">Certified Hyperledger Developer</option>
+        </select>
+        <label for="grade">Grade</label>
+        <select class="textArea" id="grade">
+            <option value="S">S</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select>
+        <input style="background-color: coral;font-weight: bold;font-size:20px;width: 100px;height: 50px;margin: auto;" type="button" onclick="handleSubmit()" value="Submit">
+       
+    </div>
+    </form>
+</body>
+</html>
