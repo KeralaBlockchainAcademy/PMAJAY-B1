@@ -59,3 +59,29 @@ Explain the flow of this code
 
 3. Write a Node.js program that processes an array of numbers. The program should double each number in the array, but with a simulated delay of 1 second for each number using Promises.
 
+## Pseudo Code for question no 3
+
+1. Create a static /dynamic array.(Create an array with fixed values or an array with values given as input by the user).
+
+2. Create another array. (New one)
+
+3. Create a function inside the function create a promise. In the promise set the setTimeout function.
+
+4. Inside the setTimeout function pass resolve and time taken 
+
+5. Create another function and pass an argument which is of type array (or you can globally declare the array). 
+
+6. Create a promise and create a resolve function.
+
+7. Use the forEach method in the array to iterate over each element in the array.
+
+8. Redeclare the promise varible to chain the next iteration to the promise. If it is not chained then all the elements will be executed parallely there will be no delay.
+
+```bash
+promise = promise.then(() => {})
+```
+9. Write the logic to double the array elements.
+
+10. Call the previous function where you have defined the promise for the delay.
+
+11. Call the main functin.
