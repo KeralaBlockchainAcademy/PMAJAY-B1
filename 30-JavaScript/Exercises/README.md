@@ -25,5 +25,5 @@ c. Allow users to save their favorite recipes to localStorage and view them late
 d. Provide an option to remove recipes from the favorites list.  
 Additional Questions:  
 e. Allow users to add new recipes, including ingredients, to the predefined array.  
-f. Implement a rating system for recipes where users can rate and see the average rating.
-g. g. Provide a filter option to sort recipes by rating, preparation time, or complexity.
+f. Implement a rating system for recipes where users can rate and see the average rating.  
+g. Provide a filter option to sort recipes by rating, preparation time, or complexity.
