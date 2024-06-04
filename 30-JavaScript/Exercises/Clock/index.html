@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Clock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="clock"></div>
+    <button onclick="toggleFormat()">Toggle 12/24 Hour Format</button>
+    <button onclick="setColor()">Set Color</button>
+    <button onclick="setFont()">Set Font</button>
+    <input type="time" id="alarm-time">
+    <button onclick="setAlarm()">Set Alarm</button>
+    <audio id="alarm-sound" src="alarm.mp3" preload="auto"></audio>
+    <div id="world-clock-container"></div>
+    <button onclick="addWorldClock()">Add World Clock</button>
+    <script src="script.js"></script>
+</body>
+</html>
