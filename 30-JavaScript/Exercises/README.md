@@ -27,3 +27,16 @@ Additional Questions:
 e. Allow users to add new recipes, including ingredients, to the predefined array.  
 f. Implement a rating system for recipes where users can rate and see the average rating.  
 g. Provide a filter option to sort recipes by rating, preparation time, or complexity.
+
+
+Reference Implementation:
+3. Customizable Clock:  
+Build a customizable digital clock that displays the current time and allows users to change its appearance.  
+
+a. Display the current time in hours, minutes, and seconds, updating every second.  
+b. Provide options for users to change the clock's format (12-hour or 24-hour) and style (e.g., color, font).  
+c. Allow users to set alarms with a custom message. When the alarm goes off, display the message and play a sound.  
+d. Implement a world clock feature where users can view the time in different time zones.  
+e. Allow users to set multiple alarms and manage them (edit, delete).  
+f. Integrate a stopwatch and timer functionality into the application.  
+
