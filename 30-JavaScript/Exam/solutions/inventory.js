@@ -61,7 +61,22 @@ function printSummary() {
     }
 }
 
+// Step 2: Test the application
+// Adding items
+addItem('1', 'Laptop', 'Electronics', 10);
+addItem('2', 'Chair', 'Furniture', 5);
+addItem('3', 'Notebook', 'Stationery', 100);
 
+// Removing an item
+removeItem('2');
 
+// Searching for items
+searchItems('Laptop'); // by name
+searchItems('Stationery'); // by category
+searchItems('1'); // by ID
 
+// Updating an item
+updateItem('1', 'Gaming Laptop', 'Electronics', 8);
 
+// Printing the summary report
+printSummary();
