@@ -40,3 +40,16 @@ d. Implement a world clock feature where users can view the time in different ti
 e. Allow users to set multiple alarms and manage them (edit, delete).  
 f. Integrate a stopwatch and timer functionality into the application.  
 
+Reference Implementation:  
+4. Interactive Story Game:  
+Create an interactive story game where users make choices that affect the outcome of the story.  
+
+a. Use an array of objects to store the story's different paths and choices.  
+b. Display a part of the story with multiple choices for the user to select from.  
+c. Update the story based on the user's choices, leading to different outcomes.  
+d. Allow users to restart the story from the beginning at any time.  
+e. Include at least three different endings based on the user's choices.  
+f. Implement a branching storyline with at least five levels of depth.  
+g. Allow users to save their progress and load it later.  
+h. Add multimedia elements such as images and sounds to enhance the storytelling experience.  
+i. Track and display the user's choices and path taken at the end of the story.  
