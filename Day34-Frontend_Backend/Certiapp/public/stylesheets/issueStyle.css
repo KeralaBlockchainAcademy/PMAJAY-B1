@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+  margin: 8px;
+}
+
+.entry-form {
+  padding: 60px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f8f9f9;
+  margin: 0 auto; 
+}
+.entry-form1{
+  padding: 40 px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f8f9f9;
+  margin: 0 auto;
+}
+
+.entry-form .form-success {
+  padding: 15px;
+}
+
+@media screen and (min-width: 740px) {
+  .entry-form {
+    width: 80%;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.form-group {
+  padding-bottom: 25px;
+  display: block;
+}
+
+.form-ctrl{
+  width: 500px; /* Set the desired width */
+  height: 40px; /* Set the desired height */
+}

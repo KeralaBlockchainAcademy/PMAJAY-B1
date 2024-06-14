@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="/app.js"></script> -->
+    
+    
+</head>
+
+<body>
+    <div class='flex flex-row justify-end p-4'>
+     <a class="border-1 bg-cyan-700 px-8 py-2  mr-2" href="/">Home</a>
+     <a class="border-1  px-8 py-2 " href="/issue">Issue Certificate</a>
+        </div>
+        <div class="flex flex-col items-center h-screen justify-center">
+          <h1 class="font-extrabold text-3xl mb-7">Certificate DApp</h1>
+          <div class="pb-4">
+          <img src="Logo.png" width="200" height="200"></div>
+          <input type="text" id="certificateID" name="certificateID" class="border-2 border-zinc-950 mb-2"
+          placeholder="Enter Certificate ID to View">
+          <button class="border-1 bg-cyan-700 px-8 py-4 rounded text-white" onClick='redirectToCertificate()'>
+            Search
+        </button>
+        </div>
+
+        <script>
+          function redirectToCertificate() {
+            // Get the certificate ID from the input field
+            const certificateId = document.getElementById('certificateID').value;
+
+            // Construct the URL with the certificate ID
+            const url = `/certificate/${certificateId}`;
+
+            console.log(certificateId);
+
+            console.log(url);
+
+            // Redirect to the constructed URL
+            window.location.href = url;
+        }
+        </script>
+</body>
+
+</html>

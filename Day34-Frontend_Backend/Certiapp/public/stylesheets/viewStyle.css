@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'Abel';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/s/abel/v6/RpUKfqNxoyNe_ka23bzQ2A.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Pinyon Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/pinyonscript/v11/6xKpdSJbL9-e9LuoeQiDRQR8WOXaPw.ttf) format('truetype');
+}
+
+.cursive {
+  font-family: 'Pinyon Script', cursive;
+}
+
+.sans {
+  font-family: 'Abel', sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.block {
+  display: block;
+}
+
+.underline {
+  border-bottom: 1px solid #777;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+.pm-empty-space {
+  height: 40px;
+  width: 100%;
+}
+
+body {
+  padding: 20px 0;
+  background: #ccc;
+}
+
+.pm-certificate-container {
+  position: relative;
+  width: 1200px;
+  height: 900px;
+  background-color: cadetblue;
+  padding: 30px;
+  color: #333;
+  font-family: 'Abel', sans-serif;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.pm-certificate-container .outer-border {
+  width: 1160px;
+  height: 860px;
+  position: absolute;
+  left: 50%;
+  margin-left: -580px;
+  top: 50%;
+  margin-top: -430px;
+  border: 2px solid #fff;
+}
+
+.pm-certificate-container .inner-border {
+  width: 1000px;
+  height: 700px;
+  position: absolute;
+  left: 50%;
+  margin-left: -500px;
+  top: 50%;
+  margin-top: -350px;
+  border: 2px solid #fff;
+}
+
+.pm-certificate-container .pm-certificate-border {
+  position: relative;
+  width: 960px;
+  height: 660px;
+  padding: 0;
+  border: 1px solid #E1E5F0;
+  background-color: #ffffff;
+  background-image: none;
+  left: 50%;
+  margin-left: -480px;
+  top: 50%;
+  margin-top: -330px;
+}
+
+.pm-certificate-container .pm-certificate-border .pm-certificate-block {
+  width: 850px;
+  height: 250px;
+  position: relative;
+  left: 50%;
+  margin-left: -430px;
+  top: 70px;
+  margin-top: 0;
+}
+
+.pm-certificate-container .pm-certificate-border .pm-certificate-title {
+  position: relative;
+  top: 40px;
+}
+
+.pm-certificate-container .pm-certificate-border .pm-certificate-title h2 {
+  font-size: 50px !important;
+}
+
+.pm-certificate-container .pm-certificate-border .pm-certificate-body {
+  padding: 20px;
+}
+
+.pm-certificate-container .pm-certificate-border .pm-certificate-body .pm-name-text {
+  font-size: 40px;
+}
+
+.pm-certificate-container .pm-certificate-border .pm-earned {
+  margin: 15px 0 20px;
+}
+
+.pm-certificate-container .pm-certificate-border .pm-earned .pm-earned-text {
+  font-size: 30px;
+}
+
+.pm-certificate-container .pm-certificate-border .pm-earned .pm-credits-text {
+  font-size: 30px;
+}
+
+.pm-certificate-container .pm-certificate-border .pm-course-title .pm-earned-text {
+  font-size: 30px;
+}
+
+.pm-certificate-container .pm-certificate-border .pm-course-title .pm-credits-text {
+  font-size: 30px;
+}
+
+.pm-certificate-container .pm-certificate-border .pm-certified {
+  font-size: 20px;
+}
+
+.pm-certificate-container .pm-certificate-border .pm-certified .underline {
+  margin-bottom: 5px;
+}
+
+.pm-certificate-container .pm-certificate-border .pm-certificate-footer {
+  width: 850px;
+  height: 250px;
+  position: relative;
+  padding-top: 20px;
+  left: 50%;
+  margin-left: -430px;
+  bottom: -150px;
+}
