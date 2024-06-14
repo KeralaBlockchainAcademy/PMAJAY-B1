@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-3/4">
+        <p id="BlogID" class="text-gray-600 text-lg mb-4">ID no</p>
+        <h1 id="title" class="text-4xl font-bold text-gray-800 mb-4">Blog Title</h1>
+        <p id="author" class="text-gray-600 text-lg mb-4">Author Name</p>
+        <div id="content" class="text-gray-700 text-lg">Blog Content</div>
+        <div class="mt-6">
+            <a href="/" class="bg-blue-500 text-white px-6 py-2 rounded-full text-lg hover:bg-blue-600">Go to Home</a>
+            <a href="/blog" class="bg-green-500 text-white px-6 py-2 rounded-full text-lg hover:bg-green-600 ml-4">Create New Blog</a>
+        </div>
+    </div>
+    <script>
+        async function fetchBlogDetails() {
+            const url = window.location.href;
+            console.log(url)
+            const id = window.location.pathname.split('/').pop()
+            try {
+                const response = await fetch(`/api/blog/${id}`);
+                console.log(response)
+                if (!response.ok) {
+                    throw new Error('Failed to fetch blog details');
+                }
+                const data = await response.json();
+                console.log(data)
+                // Display the blog details
+                document.getElementById('BlogID').textContent= data.BlogID;
+                document.getElementById('title').textContent = data.title;
+                document.getElementById('author').textContent = `By ${data.author}`;
+                document.getElementById('content').textContent = data.content;
+            } catch (error) {
+                console.error('Error fetching blog details:', error);
+                document.body.innerHTML = '<p>Failed to load blog details.</p>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchBlogDetails);
+    </script>
+</body>
+
+</html>

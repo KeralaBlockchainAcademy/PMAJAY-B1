@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-1/2">
+        <h1 class="text-2xl font-bold text-gray-800 mb-6">Create a New Blog Post</h1>
+        <form id="blogForm" action="/blog" method="POST">
+            <div class="mb-4">
+                <label for="BlogID" class="block text-gray-700">BlogID</label>
+                <input type="text" id="BlogID" name="BlogID" class="w-full border-2 border-gray-300 p-2 rounded mt-2" required>
+            </div>
+            <div class="mb-4">
+                <label for="title" class="block text-gray-700">Title</label>
+                <input type="text" id="title" name="title" class="w-full border-2 border-gray-300 p-2 rounded mt-2" required>
+            </div>
+            <div class="mb-4">
+                <label for="author" class="block text-gray-700">Author</label>
+                <input type="text" id="author" name="author" class="w-full border-2 border-gray-300 p-2 rounded mt-2" required>
+            </div>
+            <div class="mb-4">
+                <label for="content" class="block text-gray-700">Content</label>
+                <textarea id="content" name="content" rows="5" class="w-full border-2 border-gray-300 p-2 rounded mt-2" required></textarea>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
