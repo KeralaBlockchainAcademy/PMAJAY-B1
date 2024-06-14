@@ -11,6 +11,14 @@
 
 5. You want to prevent abuse of your API by limiting the number of requests a user can make in a given period. Implement rate-limiting middleware that allows a user to make only 5 requests per minute. (Hard) (check out req.ip)
 
+6. Your application requires occasional maintenance, during which you want to return a "Service Unavailable" message for all routes. Implement middleware to handle this.
+
+7. Create middleware to log the IP address of the client making the request.
+
+8. You are developing a web application using Express.js and need to serve an HTML file at the root route (/). Implement the necessary code to achieve this.
+
+9. 
+
 
 **References**
 -
