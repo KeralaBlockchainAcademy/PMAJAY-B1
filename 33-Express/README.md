@@ -16,8 +16,7 @@
 7. Create middleware to log the IP address of the client making the request.
 
 8. You are developing a web application using Express.js and need to serve an HTML file at the root route (/). Implement the necessary code to achieve this.
-
-9. 
+ 
 
 
 **References**

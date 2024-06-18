@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Sharing App - Favourites</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <header
+      class="bg-blue-500 text-white p-4 flex justify-between items-center"
+    >
+      <nav class="flex space-x-4">
+        <!-- <a href="/home" class="text-white text-lg">Home</a> -->
+        <a href="home.html" class="text-white text-lg">Home</a>
+        <!-- <a href="/favourites" class="text-white text-lg">Favourites</a> -->
+        <a href="favourites.html" class="text-white text-lg">Favourites</a>
+      </nav>
+      <!-- <form action="/logout" method="POST"> -->
+      <form action="/" >
+        <button type="submit" class="bg-white text-blue-500 rounded px-4 py-1">
+          Logout
+        </button>
+      </form>
+    </header>
+
+    <main class="flex-grow p-4">
+      <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-6 text-center">
+          Your Favourite Recipes
+        </h2>
+        <div
+          id="results"
+          class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        ></div>
+      </div>
+    </main>
+
+    <script>
+      //   async function loadfav(){
+      //       const response = await fetch('/api/favourite')
+      //       console.log(response);
+      //       const recipes = await response.json();
+      //       console.log(recipes);
+      //       const resultsContainer = document.getElementById("results");
+      //       resultsContainer.innerHTML = "";
+      //       recipes.forEach((recipe) => {
+      //       const recipeElement = document.createElement("div");
+      //       recipeElement.className = "recipe";
+      //       recipeElement.innerHTML = `
+      //               <img src="${recipe.image}" alt="${recipe.title}" class="w-full h-64 object-cover">
+      //               <h3 class="text-xl">${recipe.title}</h3>
+      //               <a href="/search/recipe/${recipe.recipeId}" class="text-blue-500">View Recipe</a>
+      //           `;
+      //       resultsContainer.appendChild(recipeElement);
+      //   });
+      // }
+      // document.addEventListener("DOMContentLoaded", loadfav);
+    </script>
+  </body>
+</html>

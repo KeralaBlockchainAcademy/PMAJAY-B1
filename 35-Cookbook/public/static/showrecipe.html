@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Details</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <header
+      class="bg-blue-500 text-white p-4 flex justify-between items-center"
+    >
+      <nav class="flex space-x-4">
+        <a href="/home" class="text-white text-lg">Home</a>
+        <a href="/favourites" class="text-white text-lg">Favourites</a>
+      </nav>
+      <form action="/logout" method="POST">
+        <button type="submit" class="bg-white text-blue-500 rounded px-4 py-1">
+          Logout
+        </button>
+      </form>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow p-4">
+      <div class="max-w-3xl mx-auto bg-white rounded-lg shadow p-6">
+        <div class="flex justify-between items-center mb-4">
+        <h2 id="recipeTitle" class="text-4xl font-bold mb-4">Recipe Title</h2>
+          <button id="favoriteButton" class="text-gray-500 text-2xl" onclick="togglecolour()">
+            <i
+              class="material-icons"
+              id="star"
+              style="font-size: 36px; color: grey"
+              >star</i
+            >
+          </button>
+        </div>
+        <img
+          id="recipeImage"
+          src=""
+          alt="Recipe Image"
+          class="rounded w-full h-64 object-cover mb-4"
+        />
+        <h3 class="text-2xl font-semibold mb-2">Ingredients</h3>
+        <ul id="recipeIngredients" class="list-disc list-inside mb-4"></ul>
+        <h3 class="text-2xl font-semibold mb-2">Instructions</h3>
+        <p id="recipeInstructions" class="text-lg"></p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4 text-center">
+      &copy; 2024 Recipe Sharing App. All rights reserved.
+    </footer>
+
+    <script>
+        function togglecolour() {
+        const starIcon = document.getElementById('star');
+        const currentColor = starIcon.style.color;
+
+        if (currentColor === 'grey') {
+            starIcon.style.color = 'yellow';
+        } else {
+            starIcon.style.color = 'grey';
+        }
+
+        // saverecipe();
+    }
+
+    // async function saverecipe() {
+    //     const recipeId = window.location.pathname.split("/").pop();
+    //     console.log(recipeId);
+    //     const response = await fetch(`/search/recipe/dish/${recipeId}`);
+    //     console.log(response);
+    //     const recipe = await response.json();
+        
+    //     const title = recipe.title;
+
+    //     const image = recipe.image;
+
+    //     try {
+    //             const response = await fetch('/add/favourites', {
+    //                 method: 'POST',
+    //                 headers: {
+    //                     'Content-Type': 'application/json'
+    //                 },
+    //                 body: JSON.stringify({ title, image, recipeId })
+    //             });
+
+    //             const data = await response.json();
+
+    //             if (response.ok) {
+    //                 alert('Recipe added to favorites!');
+    //             } else {
+    //                 alert('Failed to add recipe to favorites: ' + data.message);
+    //             }
+
+    //             console.log(data.message);
+    //         } catch (error) {
+    //             console.error('Error adding to favorites:', error);
+    //             alert('Error adding to favorites. Please try again later.');
+    //         }
+    // }
+    
+    //   async function fetchRecipeDetails() {
+    //     const recipeId = window.location.pathname.split("/").pop();
+    //     console.log(recipeId);
+    //     const response = await fetch(`/search/recipe/dish/${recipeId}`);
+    //     console.log(response);
+    //     const recipe = await response.json();
+
+    //     document.getElementById("recipeTitle").textContent = recipe.title;
+    //     document.getElementById("recipeImage").src = recipe.image;
+    //     document.getElementById("recipeIngredients").innerHTML =
+    //       recipe.extendedIngredients
+    //         .map((ingredient) => `<li>${ingredient.name}</li>`)
+    //         .join("");
+    //     const modifiedInstructions = recipe.instructions.replace(
+    //       /<\/?[^>]+(>|$)/g,
+    //       ""
+    //     );
+    //     document.getElementById("recipeInstructions").textContent =
+    //       modifiedInstructions;
+    //   }
+
+    //   document.addEventListener("DOMContentLoaded", fetchRecipeDetails);
+    </script>
+  </body>
+</html>

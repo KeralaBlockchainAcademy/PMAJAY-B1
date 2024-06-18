@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Sharing App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+    <!-- Header with Login -->
+    <header class="bg-blue-500 text-white p-4 flex justify-between items-center">
+        <h1 class="text-xl">Recipe Sharing</h1>
+        <div class="flex space-x-2">
+            <!-- <a href="/signup" class="bg-white text-blue-500 rounded px-4 py-1">Signup</a> -->
+            <a href="./signup.html" class="bg-white text-blue-500 rounded px-4 py-1">Signup</a>
+            <!-- <a href="/login" class="bg-white text-blue-500 rounded px-4 py-1">Login</a> -->
+            <a href="login.html" class="bg-white text-blue-500 rounded px-4 py-1">Login</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col justify-center items-center">
+        <img src="../images/Logo.jpeg" width="400" height="400">
+        <h2 class="text-3xl font-bold mb-4">Search for Recipes</h2>
+        <p class="text-xl mb-8">Discover and share amazing recipes with the community!</p>
+        <!-- <form action="/search" method="GET" class="w-full max-w-md flex"> -->
+        <form action="/" class="w-full max-w-md flex">
+            <input type="text" name="query" placeholder="Search recipes..." class="flex-grow rounded-l px-4 py-2 border border-gray-300">
+            <button type="submit" class="bg-blue-500 text-white rounded-r px-4 py-2">Search</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4 text-center">
+        &copy; 2024 Recipe Sharing App. All rights reserved.
+    </footer>
+
+</body>
+</html>
