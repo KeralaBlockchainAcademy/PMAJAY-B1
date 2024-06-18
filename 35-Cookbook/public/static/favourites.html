@@ -45,25 +45,25 @@
     </main>
 
     <script>
-      //   async function loadfav(){
-      //       const response = await fetch('/api/favourite')
-      //       console.log(response);
-      //       const recipes = await response.json();
-      //       console.log(recipes);
-      //       const resultsContainer = document.getElementById("results");
-      //       resultsContainer.innerHTML = "";
-      //       recipes.forEach((recipe) => {
-      //       const recipeElement = document.createElement("div");
-      //       recipeElement.className = "recipe";
-      //       recipeElement.innerHTML = `
-      //               <img src="${recipe.image}" alt="${recipe.title}" class="w-full h-64 object-cover">
-      //               <h3 class="text-xl">${recipe.title}</h3>
-      //               <a href="/search/recipe/${recipe.recipeId}" class="text-blue-500">View Recipe</a>
-      //           `;
-      //       resultsContainer.appendChild(recipeElement);
-      //   });
-      // }
-      // document.addEventListener("DOMContentLoaded", loadfav);
+        async function loadfav(){
+            const response = await fetch('/api/favourite')
+            console.log(response);
+            const recipes = await response.json();
+            console.log(recipes);
+            const resultsContainer = document.getElementById("results");
+            resultsContainer.innerHTML = "";
+            recipes.forEach((recipe) => {
+            const recipeElement = document.createElement("div");
+            recipeElement.className = "recipe";
+            recipeElement.innerHTML = `
+                    <img src="${recipe.image}" alt="${recipe.title}" class="w-full h-64 object-cover">
+                    <h3 class="text-xl">${recipe.title}</h3>
+                    <a href="/search/recipe/${recipe.recipeId}" class="text-blue-500">View Recipe</a>
+                `;
+            resultsContainer.appendChild(recipeElement);
+        });
+      }
+      document.addEventListener("DOMContentLoaded", loadfav);
     </script>
   </body>
 </html>
