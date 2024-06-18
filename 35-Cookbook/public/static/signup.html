@@ -36,27 +36,27 @@
         <p class="mt-6 text-center text-gray-600">Already have an account? <a href="/login" class="text-blue-500 hover:underline">Login</a></p>
     </div>
     <script>
-        // function handleSubmit(event) {
-        //     event.preventDefault();
+        function handleSubmit(event) {
+            event.preventDefault();
 
-        //     const username = document.getElementById('username').value
-        //     const email = document.getElementById('email').value;
-        //     const password = document.getElementById('password').value;
-        //     const confirmpassword = document.getElementById('confirm-password').value;
+            const username = document.getElementById('username').value
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmpassword = document.getElementById('confirm-password').value;
 
-        //     if(password.length < 6) {
-        //         document.getElementById('passwordError').textContent = 'Password is too short. It should be atleast 6 charecters'
-        //         return
-        //     }
+            if(password.length < 6) {
+                document.getElementById('passwordError').textContent = 'Password is too short. It should be atleast 6 charecters'
+                return
+            }
             
-        //     if(password!= confirmpassword) {
-        //         document.getElementById('confirmPasswordError').textContent = "Password do not match";
-        //         return
-        //     }
+            if(password!= confirmpassword) {
+                document.getElementById('confirmPasswordError').textContent = "Password do not match";
+                return
+            }
 
-        //     document.getElementById('signupform').submit();
-        // }
-        // document.getElementById('signupform').addEventListener('submit',handleSubmit);
+            document.getElementById('signupform').submit();
+        }
+        document.getElementById('signupform').addEventListener('submit',handleSubmit);
     </script>
 </body>
 </html>
