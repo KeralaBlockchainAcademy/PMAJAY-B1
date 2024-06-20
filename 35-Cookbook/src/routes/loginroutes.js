@@ -44,6 +44,27 @@ loginroute.post('/login', (req,res) => {
     }
 })
 
+loginroute.post('/add/favourites', (req,res) => {
+    const {title, image, recipeId} = req.body;
+
+    const username = req.session.username;
+
+    const user = users[username];
+
+    user.favourites.push({title, image, recipeId});
+
+    res.json({message: 'Recipe added to favourites'});
+
+})
+
+loginroute.get('/api/favourite', (req,res) => {
+    const username = req.session.username;
+
+    const favourite = users[username].favourites
+
+    res.json(favourite)
+})
+
 loginroute.get('/logout', (req, res) => {
     req.session.destroy();
     res.redirect('/')

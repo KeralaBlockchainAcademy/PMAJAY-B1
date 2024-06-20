@@ -33,29 +33,29 @@
       ></div>
     </main>
     <script>
-      // async function loadfromUrl() {
-      //   const dish = new URLSearchParams(window.location.search).get('query'); // Get query term from URL
-      //   console.log(dish)
-      //   const response = await fetch("/search/result", {
-      //     method: "POST",
-      //     headers: { "Content-Type": "application/json" },
-      //     body: JSON.stringify({ query: dish }),
-      //   });
-      //   const recipes = await response.json();
-      //   const resultsContainer = document.getElementById("results");
-      //   resultsContainer.innerHTML = "";
-      //   recipes.forEach((recipe) => {
-      //     const recipeElement = document.createElement("div");
-      //     recipeElement.className = "recipe";
-      //     recipeElement.innerHTML = `
-      //               <img src="${recipe.image}" alt="${recipe.title}" class="w-full h-64 object-cover">
-      //               <h3 class="text-xl">${recipe.title}</h3>
-      //               <a href="/search/recipe/${recipe.id}" class="text-blue-500">View Recipe</a>
-      //           `;
-      //     resultsContainer.appendChild(recipeElement);
-      //   });
-      // }
-      // document.addEventListener('DOMContentLoaded', loadfromUrl);
+      async function loadfromUrl() {
+        const dish = new URLSearchParams(window.location.search).get('query'); // Get query term from URL
+        console.log(dish)
+        const response = await fetch("/search/result", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query: dish }),
+        });
+        const recipes = await response.json();
+        const resultsContainer = document.getElementById("results");
+        resultsContainer.innerHTML = "";
+        recipes.forEach((recipe) => {
+          const recipeElement = document.createElement("div");
+          recipeElement.className = "recipe";
+          recipeElement.innerHTML = `
+                    <img src="${recipe.image}" alt="${recipe.title}" class="w-full h-64 object-cover">
+                    <h3 class="text-xl">${recipe.title}</h3>
+                    <a href="/search/recipe/${recipe.id}" class="text-blue-500">View Recipe</a>
+                `;
+          resultsContainer.appendChild(recipeElement);
+        }); 
+      }
+      document.addEventListener('DOMContentLoaded', loadfromUrl);
     </script>
   </body>
 </html>
