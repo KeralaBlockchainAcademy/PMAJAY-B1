@@ -8,13 +8,10 @@ After Installation do following commands
 
 ``sudo systemctl status mongod``
 
-To enter into the mongodb shell (Press ctl+c and  type the following command)
+To enter into the mongodb shell (Press ctl+c and  type the following commands)
 
 ``mongosh``
 
-To stop Mongodb
-
-``sudo systemctl stop mongod``
 
 ``show databases``
 
@@ -46,6 +43,9 @@ db.collection1.updateMany(
   { $set: { status: "young" } }
 )
 ```
+To stop Mongodb
+
+``sudo systemctl stop mongod``
 
 
 
