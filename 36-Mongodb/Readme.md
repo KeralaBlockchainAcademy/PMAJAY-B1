@@ -18,6 +18,8 @@ To stop Mongodb
 
 ``show databases``
 
+``show collections``
+
 ``use sample``
 
 Perform CRUD Operations
@@ -25,10 +27,15 @@ Perform CRUD Operations
 ``db.collection1.insertOne()``
 
 ``db.collection1.insertMany([])``
+
 ``db.collection1.findOne()``
+
 ``db.collection1.find()``
+
 ``db.collection1.updateOne({key:value},{$set:{key:value}})``
+
 ``db.collection1.deleteOne()``
+
 ``db.collection1.deleteMany({ age: { $gt: 30 } })``
 
 ``db.collection1.find({$or:[{age:{$gt:30}},{age:{$gte:30}}]})``
