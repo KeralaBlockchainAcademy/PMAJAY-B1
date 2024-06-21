@@ -13,8 +13,8 @@ app.use('/',routes);
 
 
 mongoose.connect(
-   "mongodb://localhost:27017/KBA_2?authSource=admin"// using connection string directly
-   //uri // using .env
+   "mongodb://localhost:27017/KBA_2"// using connection string directly
+   
 );
 const database = mongoose.connection;
 database.on("error", (error) => {
