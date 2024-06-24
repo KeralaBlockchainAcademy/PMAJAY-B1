@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <meta charset="UTF-8">
+  <title>Certificate</title>
+  <base href="/">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel='stylesheet' href='stylesheets/style.css' />
+  <link rel="stylesheet" href="stylesheets/viewStyle.css">
+</head>
+
+<body>
+  <div class="container pm-certificate-container">
+    <div class="outer-border"></div>
+    <div class="inner-border"></div>
+    <div class="pm-certificate-border col-xs-12">
+      <div class="row pm-certificate-header">
+        <div class="pm-certificate-title cursive col-xs-12 text-center">
+          <h2>Kerala Blockchain Academy</h2>
+        </div>
+      </div>
+      <div class="row pm-certificate-body">
+        <div class="pm-certificate-block">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-2">
+                <!-- LEAVE EMPTY -->
+              </div>
+              <div class="pm-certificate-name underline margin-0 col-xs-8 text-center">
+                <span id="name" class="pm-name-text bold">
+                  Name: TBD
+                </span>
+              </div>
+              <div class="col-xs-2">
+                <!-- LEAVE EMPTY -->
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-2">
+                <!-- LEAVE EMPTY -->
+              </div>
+              <div class="pm-earned col-xs-8 text-center">
+                <span class="pm-earned-text padding-0 block cursive">has earned</span>
+                <span id="grade" class="pm-credits-text block bold sans">
+                  Grade: TBD
+                </span>
+              </div>
+              <div class="col-xs-2">
+                <!-- LEAVE EMPTY -->
+              </div>
+              <div class="col-xs-12"></div>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-2">
+                <!-- LEAVE EMPTY -->
+              </div>
+              <div class="pm-course-title col-xs-8 text-center">
+                <span class="pm-earned-text block cursive">while completing the training course
+                  entitled</span>
+              </div>
+              <div class="col-xs-2">
+                <!-- LEAVE EMPTY -->
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-2">
+                <!-- LEAVE EMPTY -->
+              </div>
+              <div class="pm-course-title underline col-xs-8 text-center">
+                <span id="course" class="pm-credits-text block bold sans">
+                  Course: TBD
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col pm-certified">
+                <span id="ID" class="pm-credits-text block bold sans">Certificate ID: TBD
+                </span>
+              </div>
+              <div class="col pm-certified text-end">
+                <span id="date" class="pm-credits-text block sans">Date of Completion: TBD</span>
+                <span class="pm-credits-text block sans">Place: Trivandrum</span><br />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="row">
+            <div class="pm-certificate-footer">
+              <br /><br />
+              <div class="col pm-certified text-end">
+                <span class="bold block">(sd/-)</span>
+                <span class="bold block">Director</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    async function fetchDetails() {
+      const url = window.location.href;
+      console.log(url)
+      const id = window.location.pathname.split('/').pop();
+      console.log(id);
+
+    try {
+    const response = await fetch(`/api/certificate/${id}`);
+    console.log(response)
+    if (!response.ok) {
+        throw new Error('Failed to fetch certificate details');
+    }
+    const data = await response.json();
+    // Display the certificate details
+    document.getElementById('ID').textContent = data.CertID;
+    document.getElementById('course').textContent = data.CourseName;
+    document.getElementById('name').textContent = data.CandName;
+    document.getElementById('grade').textContent = data.Grade ;
+    document.getElementById('date').textContent = data.Date;
+} catch (error) {
+    console.error('Error fetching certificate details:', error);
+    document.body.innerHTML = '<p>Failed to load certificate details.</p>';
+}
+    }
+
+        document.addEventListener('DOMContentLoaded', fetchDetails);
+        // Add event listener to the button to redirect to the home page
+        // document.getElementById('homeButton').addEventListener('click', function() {
+        //     window.location.href = '/'; // Replace with the URL you want to redirect to
+        // });
+  </script>
+</body>
+
+</html>

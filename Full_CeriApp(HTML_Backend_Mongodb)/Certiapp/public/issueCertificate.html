@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <title>Issue Certificate</title>
+
+</head>
+
+<body>
+  <div class='flex flex-row justify-end p-4'>
+    <a class="border-1  px-8 py-2  mr-2" href="/">Home</a>
+    <a class="border-1 bg-cyan-700 px-8 py-2 " href="/issue">Issue Certificate</a>
+
+  </div>
+
+  <div>
+    <h1 class=" text-2xl font-bold">Certificate Dapp</h1>
+
+    <br />
+    <div >
+      <h3 class="text-center text-3xl font-bold mb-4">Issue New Certificate</h3>
+    <div class="flex flex-col justify-center items-center ">
+      <form action="/submit-form" method="POST">
+        <div class="border-2 rounded px-20" >
+          <div class="p-2">
+          <label class="block " for="courseName">Select Course *</label>
+          <select class="border-2 border-black" name="CourseName" id="courseName">
+            <option>Certified Blockchain Associate</option>
+            <option>Certified Ethereum Developer</option>
+            <option>Blockchain Foundation</option>
+            <option>Ethereum Fundamentals</option>
+          </select>
+        </div>
+
+        <div class="p-2">
+          <label class="block" for="certificateID">Certificate ID *</label>
+          <input type="text" class="border-2 border-black" name="CertID" id="certificateID" placeholder="Certificate ID" required>
+        </div>
+        <div class="p-2">
+          <label class="block" for="candidateName">Candidate name *</label>
+          <input type="text" class="border-2 border-black" name="CandName" id="candidateName" placeholder="Name" required>
+        </div>
+        <div class=" p-2">
+          <label class="block" for="grade">Select Grade *</label>
+          <select class="border-2 border-black" id="grade" name="Grade" id="grade">
+            <option>S</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+          </select>
+        </div>
+        <div class="p-2">
+          <label class="block" for="date">Issue Date *</label>
+          <input  class="border-2 border-black" id="date" name="Date" required>
+        </div>
+        <button class="border-2 bg-orange-700 hover:bg-orange-400 mt-6 ml-10" type="submit" >Issue Certificate</button></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
