@@ -4,7 +4,7 @@
 
 - Create another html page after form submission.
 
-- Create the array for storage purposes and create the post, put and delete request 
+- Create database and connect with application 
 
 - Create a seperate api request for sending the particular certificate data
 
