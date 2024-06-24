@@ -1,7 +1,6 @@
 const {mongoose} = require ('mongoose');
 const routes=require('./routes.js')
 const express=require('express');
-const dotenv=require('dotenv');
 const app=express();
 const PORT = 3005;
 app.listen(PORT, () => {
@@ -11,11 +10,10 @@ app.listen(PORT, () => {
 });
 app.use(express.json());
 app.use('/',routes);
-dotenv.config();
-const uri=process.env.mongodb_uri;
+
 
 mongoose.connect(
-   uri// using .env file
+   "mongodb://localhost:27017/CertiAPP"// using connection string directly
    
 );
 const database = mongoose.connection;

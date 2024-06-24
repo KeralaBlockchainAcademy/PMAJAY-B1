@@ -1,5 +1,5 @@
 const Router=require('express');
-const sample =require ('./Models/sample.js')
+const sample =require ('./Models/Certidetails.js')
 var router=Router();
 router.post('/create',async(req,res)=>{
    try{
@@ -17,7 +17,7 @@ router.get('/read/:id',async(req,res)=>{
 
    const id = req.params.id;
    console.log(id);
-   const details = await sample.findOne({userid: id});
+   const details = await sample.findOne({CertID: id});
    //const details = await sample.find({});
   console.log("details",details);
 
