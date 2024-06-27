@@ -7,7 +7,8 @@ function Demo({
     fontSize: "20px",
   },
   likes = 0,
-  
+
+
 }) {
   const [count, setCount] = useState(num);
 
