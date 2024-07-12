@@ -7,4 +7,5 @@ CSS test - https://forms.gle/fM2niqtxcfC1hWHt9
 Backend + Mongodb Exam: https://docs.google.com/document/d/1Uut1e5ENyXu5TorDM6KzhMGSRn-EbxSH-3pxotji8hU/edit?usp=sharing 
 
 
-
+React-Exam:
+https://docs.google.com/document/d/1LUoNO8rYPvPmp3dVdhnTIHM8jfMGLURoTRajrE3B_uc/edit
