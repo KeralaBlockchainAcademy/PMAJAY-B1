@@ -1,0 +1,50 @@
+[
+    {
+      "courseId": "1",
+      "title": "Certified Blockchain Associate",
+      "type": "Self paced",
+      "description": "Certified Blockchain Associate (CBA) is the flagship certification program offered by Kerala Blockchain Academy in collaboration with MLG Blockchain, Canada. The blockchain course is a first of its kind, providing a complete tour of the blockchain fundamentals for any new learner. The blockchain beginner program aims to simplify the daunting task of learning blockchain.  ",  
+      "price": "Rs.5000"
+    },
+  
+    {
+      "courseId": "2",
+      "title": "Developer Essentials for Blockchain",
+      "type": "Self paced",
+      "description": "The “Developer Essentials for Blockchain” course is designed as a bridge for individuals with fundamental programming knowledge who plan to develop applications in the blockchain space. The course aims to help learners understand the integrated working of various technologies commonly used in blockchain development, including front-end development, back-end development, databases, containers, and Git. ",  
+      "price": "Rs.3500"
+    },
+  
+    {
+      "courseId": "3",
+      "title": "Certified Ethereum Developer",
+      "type": "Self paced",
+      "description": "Certified Ethereum Developer is designed for learning about Ethereum Public Blockchain and Decentralized Applications (Dapps). The course is mainly intended for a developer who wants to develop decentralized applications for the Ethereum Network. The course is structured in a zero to finish project development manner. The candidate gets to develop a decentralized application while learning about the various concepts of the application development on the Ethereum network. ",  
+      "price": "Rs.7000"
+    },
+  
+    {
+      "courseId": "4",
+      "title": "Certified Hyperledger Fabric Developer",
+      "type": "Self paced",
+      "description": "Kerala Blockchain Academy (KBA), an Associate member and training partner of Hyperledger, offers training and certification programs on the Hyperledger Fabric platform. In this course, you will learn about the technical architecture and logical architecture of various components in the Hyperledger Fabric (v2.3) with the help of a fictional case study. ",  
+      "price": "Rs.7000"
+    },
+  
+    {
+      "courseId": "5",
+      "title": "Blockchain Foundation Programe",
+      "type": "Self paced",
+      "description": "The Blockchain Foundation Program aims to provide a well-rounded understanding of blockchain basics. Explaining the key components, the program offers a foundational understanding of how blockchain works and how different industries use blockchain. The course distinct concepts like decentralization, peer-to-peer networking, smart contract automation, etc. It acts as a one-stop blockchain dictionary briefing blockchain principles and additional resources to reference.",  
+      "price": "Free"
+    },
+  
+    {
+      "courseId": "6",
+      "title": "Certified Ethereum Administrator",
+      "type": "Self paced",
+      "description": "Dive deep into the world of Ethereum-based blockchain networks with our comprehensive course. Designed for those passionate about blockchain exploration and experimentation, this course offers theoretical knowledge and practical application. Whether you’re a blockchain enthusiast or a professional aiming to leverage Ethereum for enterprise solutions, this course is your gateway to mastering the Ethereum platform.",  
+      "price": "Rs.8500"
+    }
+  
+  ]
