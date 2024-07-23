@@ -1,4 +1,4 @@
-export function sayHello(a, b) {
+export function sayHello() {
     return 'hello';
     // return 'hello1'
     // return 1
