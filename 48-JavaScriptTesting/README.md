@@ -5,7 +5,11 @@
 
 `npm init`
 
-`npm install mocha@9.2.2 chai@4.3.6 --save-dev`
+`npm install mocha chai --save-dev`
+
+To support ES6, add the following to the package.json
+`   "type": "module", `
+
 
 Edit the test script in package.json
    `"test": "mocha"`
