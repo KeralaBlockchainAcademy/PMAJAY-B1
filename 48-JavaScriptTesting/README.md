@@ -1,33 +1,25 @@
 
-**Day 6**
+`mkdir mochatest`
 
-`mkdir HTML`
+`cd mochatest`
 
-`cd HTML`
+`npm init`
 
-`touch sample.html`
+`npm install mocha@9.2.2 chai@4.3.6 --save-dev`
 
-`gedit sample.html`
+Edit the test script in package.json
+   `"test": "mocha"`
 
-**KBA Website**
+Create app.js and test/appTest.js
 
-`cd ..`
+`npm run test`
 
-`mkdir KBA_Website`
-
-`cd KBA_Website`
-
-`touch home.html`
+Install JavaScript Test Runner extension in VScode
 
 
 
-**Exercise 1 - Portfolio website**
 
-1. Create a folder with your name and an html page
-2. Create Heading
-3. Write a paragraph about yourself (atleast 4 sentences)
-4. Find out the HTML tag for displaying scrollable text and demonstrate its application.
 
-Submit by **12-Apr-2024, 9.45am**
+
 
 
