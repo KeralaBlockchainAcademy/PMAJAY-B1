@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "mocha"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^4.3.6",
-    "mocha": "^9.2.2"
+    "chai": "^5.1.1",
+    "mocha": "^10.7.0"
   }
 }

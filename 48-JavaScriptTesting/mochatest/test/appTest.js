@@ -1,10 +1,8 @@
-const assert = require('chai').assert
-const { sayHello, addNumbers } = require('../app')
+import { assert } from "chai";
+import { sayHello, addNumbers } from "../app.js";
 
-
-//Results
-sayHelloResult = sayHello()
-addNumbersResult = addNumbers(5, 5)
+let sayHelloResult = sayHello()
+let addNumbersResult = addNumbers(5, 5)
 
 describe('App', () => {
 
