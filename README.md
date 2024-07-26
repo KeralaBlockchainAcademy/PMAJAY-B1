@@ -9,3 +9,6 @@ Backend + Mongodb Exam: https://docs.google.com/document/d/1Uut1e5ENyXu5TorDM6Kz
 
 React-Exam:
 https://docs.google.com/document/d/1LUoNO8rYPvPmp3dVdhnTIHM8jfMGLURoTRajrE3B_uc/edit
+
+
+Backend+Mongodb Retest:https://docs.google.com/document/d/1TFhiCeK8CzD8FASwSBgpZL0sPs31p1NL5PlvOqkEWtA/edit?usp=sharing
