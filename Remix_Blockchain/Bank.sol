@@ -6,15 +6,31 @@ contract Bank{
     //mapping(type of key=>type of value) mappingName;
     mapping(address=>uint) public  balanceLedger;
 
+    modifier balanceCheck(uint amt){
+        
+        require(balanceLedger[msg.sender]>=amt,"Insufficient balance");
+         _;
+       
+    }
+
     function deposit()public payable {
         balanceLedger[msg.sender]+=msg.value;
     }
 
-    function withdraw(uint amt)public{
+    function withdraw(uint amt)public balanceCheck(amt){
         // if(balanceLedger[msg.sender]>=amt){
-            require(balanceLedger[msg.sender]>=amt,"Insufficient balance");
+            // require(balanceLedger[msg.sender]>=amt,"Insufficient balance");
             balanceLedger[msg.sender]-=amt;
             payable(msg.sender).transfer(amt);
         // }
+    }
+
+    function transferTo(address _recepient, uint amt) public balanceCheck(amt){
+        // if(balanceLedger[msg.sender]>amt){
+            // require(balanceLedger[msg.sender]>amt,"Insufficient Balance");
+            balanceLedger[msg.sender]-=amt;
+            payable(_recepient).transfer(amt);
+        
+        
     }
 }
