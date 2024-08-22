@@ -38,4 +38,16 @@ contract Bank{
         
         
     }
+
+    function monitorBal()public view  returns(address,uint){
+        uint maxBalance;
+        address maxAddress;
+        for(uint i=1;i<=count;i++){
+            maxAddress= addressCount[i];
+            if(maxBalance<balanceLedger[maxAddress]){
+                maxBalance=balanceLedger[maxAddress];
+            }
+        }
+        return(maxAddress,maxBalance);
+    }
 }
