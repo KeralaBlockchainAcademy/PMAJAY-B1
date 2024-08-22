@@ -7,6 +7,16 @@ contract Bank{
     uint public count;
     mapping(uint=>address)public addressCount;
     mapping(address=>uint) public  balanceLedger;
+    address public admin;
+
+    constructor(){
+        admin=msg.sender;
+    }
+
+    modifier onlyAdmin{
+        require(msg.sender==admin,"Unauthorized access");
+        _;
+    }
 
     modifier balanceCheck(uint amt){
         
@@ -39,12 +49,13 @@ contract Bank{
         
     }
 
-    function monitorBal()public view  returns(address,uint){
+    function monitorBal()public view onlyAdmin returns(address,uint){
         uint maxBalance;
         address maxAddress;
         for(uint i=1;i<=count;i++){
-            maxAddress= addressCount[i];
-            if(maxBalance<balanceLedger[maxAddress]){
+            
+            if(maxBalance<balanceLedger[addressCount[i]]){
+                maxAddress= addressCount[i];
                 maxBalance=balanceLedger[maxAddress];
             }
         }
