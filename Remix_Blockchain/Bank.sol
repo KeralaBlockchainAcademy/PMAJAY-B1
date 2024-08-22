@@ -4,6 +4,8 @@ pragma solidity 0.8.23;
 
 contract Bank{
     //mapping(type of key=>type of value) mappingName;
+    uint public count;
+    mapping(uint=>address)public addressCount;
     mapping(address=>uint) public  balanceLedger;
 
     modifier balanceCheck(uint amt){
@@ -14,6 +16,9 @@ contract Bank{
     }
 
     function deposit()public payable {
+        if(balanceLedger[msg.sender]==0){
+            addressCount[++count]=msg.sender;
+        }
         balanceLedger[msg.sender]+=msg.value;
     }
 
