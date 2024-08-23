@@ -10,8 +10,17 @@ contract Cert{
         string date;
     }
     mapping(uint=>Certificate) public Certificates;
+    address public admin;
+    constructor(){
+        admin=msg.sender;
+    }
 
-    function issue(uint _id,string memory _name,string memory _course,string memory _grade,string memory _date)public{
+    modifier onlyAdmin(){
+        require(msg.sender==admin,"Unauthorized acess");
+        _;
+    }
+
+    function issue(uint _id,string memory _name,string memory _course,string memory _grade,string memory _date)public onlyAdmin{
         // Certificates[_id].name=_name;
         // Certificates[_id].course=_course;
         // Certificates[_id].grade=_grade;
