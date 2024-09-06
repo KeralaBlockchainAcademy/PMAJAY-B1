@@ -12,3 +12,9 @@ https://docs.google.com/document/d/1LUoNO8rYPvPmp3dVdhnTIHM8jfMGLURoTRajrE3B_uc/
 
 
 Backend+Mongodb Retest:https://docs.google.com/document/d/1TFhiCeK8CzD8FASwSBgpZL0sPs31p1NL5PlvOqkEWtA/edit?usp=sharing
+
+
+Opensea link-
+```
+ https://testnets.opensea.io/assets/sepolia/0x4e48504993F7a6CD79BE338f98C6634ef0238e5a/0
+ ```
