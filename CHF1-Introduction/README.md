@@ -1,4 +1,4 @@
-Refereence: https://hyperledger-fabric.readthedocs.io/en/latest/index.html
+Reference: https://hyperledger-fabric.readthedocs.io/en/latest/index.html
 
 
 # Installing the Dependencies
