@@ -6,7 +6,12 @@ Note: If any of the following dependencies are available on your laptop, then no
 Install curl using the command
 ```
 sudo apt install curl -y
+```
 
+To verify the installtion enter the following command
+
+
+```
 curl -V
 ```
 
