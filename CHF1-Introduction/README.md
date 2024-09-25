@@ -1,7 +1,9 @@
+# Hyperledger Fabric
+
 Reference: https://hyperledger-fabric.readthedocs.io/en/latest/index.html
 
 
-# Installing the Dependencies
+## Install the Dependencies
 
 Note: If any of the following dependencies are available on your laptop, then no need to install it.
 
