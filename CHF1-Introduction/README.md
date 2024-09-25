@@ -8,7 +8,7 @@ Install curl using the command
 sudo apt install curl -y
 ```
 
-To verify the installtion enter the following command
+To verify the installation enter the following command
 
 
 ```
@@ -16,12 +16,12 @@ curl -V
 ```
 
 ## JQ
-INstall JQ using the following command
+Install JQ using the following command
 ```
 sudo apt install jq -y
 ```
 
-To verify the installtion enter the following command
+To verify the installation enter the following command
 
 
 ```
@@ -33,7 +33,7 @@ Install Build Essential uisng the commnad
 ```
 sudo apt install build-essential
 ```
-To verify the installtion enter the following command
+To verify the installation enter the following command
 
 
 ```
