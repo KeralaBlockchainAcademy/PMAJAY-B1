@@ -45,7 +45,7 @@ peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.exa
 peer chaincode query -C mychannel -n basic -c '{"Args":["GetAllAssets"]}'
 ```
 ```
-peer chaincode query -C mychannel -n basic -c '{"function":"ReadAsset","Args":["asset5"]}
+peer chaincode query -C mychannel -n basic -c '{"function":"ReadAsset","Args":["asset5"]}'
 ```
 ## Invoke command to transfer an Asset
 ```
@@ -53,5 +53,5 @@ peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.exa
 ```
 ## Query Command to read the details of transferred asset
 ```
-peer chaincode query -C mychannel -n basic -c '{"function":"ReadAsset","Args":["asset5"]}
+peer chaincode query -C mychannel -n basic -c '{"function":"ReadAsset","Args":["asset5"]}'
 ```
