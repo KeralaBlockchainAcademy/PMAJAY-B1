@@ -6,7 +6,6 @@ const routes = require("./routes/routes");
 const authRoute = require("./routes/auth");
 const cookieParser = require("cookie-parser");
 
-
 app.use(express.json());
 app.use(cookieParser());
 

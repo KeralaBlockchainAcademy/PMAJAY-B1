@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLoaderData, useNavigate, useParams } from 'react-router-dom';
 import { getUserType } from './LoginPage';
+import banner from '../assets/images/banner-kba.png'
 
 const CoursePage = () => {
 
@@ -24,6 +25,7 @@ const CoursePage = () => {
     // }, [])
 
     const course = useLoaderData();
+    // console.log("newcoue", course)
     const { id } = useParams()
     const navigate = useNavigate()
     const userType = getUserType()
@@ -49,7 +51,7 @@ const CoursePage = () => {
 
                     <div className="bg-purple-100 shadow-lg rounded-lg overflow-hidden">
                         <img
-                            src="./banner-kba.png"
+                            src={banner}
                             alt="Course Thumbnail"
                             className="w-full h-64 object-cover"
                         />
