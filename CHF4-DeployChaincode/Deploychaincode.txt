@@ -1,0 +1,79 @@
+
+
+
+—-----------------Chaincode lifecycle—-------------------
+
+############## host terminal ##############
+
+/////Create a folder named Chaincode in the same location of Fabric-network.
+mkdir ../Chaincode
+
+/////Copy the folder fabric-samples/asset-transfer-basic/chaincode-javascript to the Chaincode folder available in the location of Fabric-network.
+cp -r <path to fabric-samples>/fabric-samples/asset-transfer-basic/chaincode-javascript ../Chaincode
+
+
+############## peer0_Org1 terminal ##############
+
+peer lifecycle chaincode package basic.tar.gz --path ../Chaincode/chaincode-javascript/ --lang node --label basic_1.0
+
+peer lifecycle chaincode install basic.tar.gz
+
+peer lifecycle chaincode queryinstalled
+
+############## peer0_Org2 terminal ##############
+
+peer lifecycle chaincode install basic.tar.gz
+
+peer lifecycle chaincode queryinstalled
+
+############## peer0_Org1 terminal ##############
+
+///Execute the following command with the correct Package ID
+export CC_PACKAGE_ID=basic_1.0:d3ced865d65bb0db0980f7c27e023d7c8c7be01ebca4b37642b1447dd5873818
+
+peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID $CHANNEL_NAME --name basic --version 1.0 --package-id $CC_PACKAGE_ID --sequence 1 --tls --cafile $ORDERER_CA --waitForEvent
+
+
+############## peer0_Org2 terminal ##############
+
+///Execute the following command with the correct Package ID
+export CC_PACKAGE_ID=basic_1.0:d3ced865d65bb0db0980f7c27e023d7c8c7be01ebca4b37642b1447dd5873818
+
+peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID $CHANNEL_NAME --name basic --version 1.0 --package-id $CC_PACKAGE_ID --sequence 1 --tls --cafile $ORDERER_CA --waitForEvent
+
+
+
+############## peer0_Org1 terminal ##############
+
+peer lifecycle chaincode checkcommitreadiness --channelID $CHANNEL_NAME --name basic --version 1.0 --sequence 1 --tls --cafile $ORDERER_CA --output json
+
+peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID $CHANNEL_NAME --name basic --version 1.0 --sequence 1 --tls --cafile $ORDERER_CA --peerAddresses localhost:7051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt"
+
+peer lifecycle chaincode querycommitted --channelID $CHANNEL_NAME --name basic --cafile $ORDERER_CA
+
+peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile $ORDERER_CA -C $CHANNEL_NAME -n basic --peerAddresses localhost:7051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt" -c '{"function":"InitLedger","Args":[]}'
+
+peer chaincode query -C $CHANNEL_NAME -n basic -c '{"Args":["GetAllAssets"]}'
+
+############## peer0_Org2 terminal ##############
+
+peer chaincode query -C $CHANNEL_NAME -n basic -c '{"Args":["GetAllAssets"]}'
+
+/////Open another terminal with in Fabric-network folder, let's call this terminal as cli terminal.
+
+############## cli terminal ##############
+
+docker exec -it cli bash
+
+export CHANNEL_NAME=mychannel
+export CORE_PEER_LOCALMSPID=Org1MSP
+export CORE_PEER_TLS_ENABLED=true
+export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+export CORE_PEER_ADDRESS=peer0.org1.example.com:7051
+export ORDERER_CA=${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+
+
+peer chaincode query -C $CHANNEL_NAME -n basic -c '{"Args":["GetAllAssets"]}'
+
+exit
