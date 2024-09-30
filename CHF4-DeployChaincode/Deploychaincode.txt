@@ -29,7 +29,8 @@ peer lifecycle chaincode queryinstalled
 ############## peer0_Org1 terminal ##############
 
 ///Execute the following command with the correct Package ID
-export CC_PACKAGE_ID=basic_1.0:d3ced865d65bb0db0980f7c27e023d7c8c7be01ebca4b37642b1447dd5873818
+
+export CC_PACKAGE_ID=$(peer lifecycle chaincode calculatepackageid basic.tar.gz)
 
 peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID $CHANNEL_NAME --name basic --version 1.0 --package-id $CC_PACKAGE_ID --sequence 1 --tls --cafile $ORDERER_CA --waitForEvent
 
@@ -37,7 +38,7 @@ peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameO
 ############## peer0_Org2 terminal ##############
 
 ///Execute the following command with the correct Package ID
-export CC_PACKAGE_ID=basic_1.0:d3ced865d65bb0db0980f7c27e023d7c8c7be01ebca4b37642b1447dd5873818
+export CC_PACKAGE_ID=$(peer lifecycle chaincode calculatepackageid basic.tar.gz)
 
 peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID $CHANNEL_NAME --name basic --version 1.0 --package-id $CC_PACKAGE_ID --sequence 1 --tls --cafile $ORDERER_CA --waitForEvent
 
