@@ -8,7 +8,7 @@
 
  ### Setting Environment variables
 ```
-
+export FABRIC_CA_CLIENT_HOME=${PWD}/organizations/peerOrganizations/org1.example.com/
 ```
 ### Register new peer
 ```
