@@ -181,7 +181,7 @@ export CC_PACKAGE_ID=$(peer lifecycle chaincode calculatepackageid basic.tar.gz)
 peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile $ORDERER_CA --channelID $CHANNEL_NAME --name basic --version 1.0 --package-id $CC_PACKAGE_ID --sequence 1 --waitForEvent
 ```
 ```
-peer lifecycle chaincode querycommitted --channelID $CHANNEL_NAME --name kbaasset --cafile $ORDERER_CA
+peer lifecycle chaincode querycommitted --channelID $CHANNEL_NAME --name basic --cafile $ORDERER_CA
 ```
 ### Query
 ```
