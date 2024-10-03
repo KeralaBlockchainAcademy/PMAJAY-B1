@@ -185,7 +185,7 @@ peer lifecycle chaincode querycommitted --channelID $CHANNEL_NAME --name basic -
 ```
 ### Query
 ```
-peer chaincode query -C $CHANNEL_NAME -n basic -c '{"function":"ReadAsset", "Args":["Asset-5"]}'
+peer chaincode query -C $CHANNEL_NAME -n basic -c '{"function":"ReadAsset", "Args":["asset5"]}'
 ```
 ## To stop the network for peer1org1 & org3 
 ```
