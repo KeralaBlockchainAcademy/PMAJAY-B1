@@ -22,7 +22,7 @@ export ORG2_PEER_TLSROOTCERT=${PWD}/organizations/peerOrganizations/org2.example
 ```
 # Package Chaincode
 ```
- peer lifecycle chaincode package basic_2.tar.gz --path ${PWD}/../chaincode-javascript --lang node --label basic_2.0
+ peer lifecycle chaincode package basic_2.tar.gz --path ../chaincode-javascript --lang node --label basic_2.0
 ```
 # Install Chaincode
 ```
