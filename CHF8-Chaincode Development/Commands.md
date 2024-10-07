@@ -1,11 +1,11 @@
 ***Build startAutomobileNetwork.sh script file
 
-``
+```
 chmod +x startAutomobileNetwork.sh
-``
-``
+```
+```
 ./startAutomobileNetwork.sh
-``
+```
 
 ***To submit transaction as ManufacturerMSP
 
@@ -23,20 +23,20 @@ export DEALER_PEER_TLSROOTCERT=${PWD}/organizations/peerOrganizations/dealer.aut
 export MVD_PEER_TLSROOTCERT=${PWD}/organizations/peerOrganizations/mvd.auto.com/peers/peer0.mvd.auto.com/tls/ca.crt
 ```
 
-``
+```
 peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.auto.com --tls --cafile $ORDERER_CA -C $CHANNEL_NAME -n KBA-Automobile --peerAddresses localhost:7051 --tlsRootCertFiles $MANUFACTURER_PEER_TLSROOTCERT --peerAddresses localhost:9051 --tlsRootCertFiles $DEALER_PEER_TLSROOTCERT --peerAddresses localhost:11051 --tlsRootCertFiles $MVD_PEER_TLSROOTCERT -c '{"function":"createCar","Args":["Car-01", "Tata", "Nexon", "White"]}'
-``
+```
 
-``
+```
 peer chaincode query -C $CHANNEL_NAME -n KBA-Automobile -c '{"function":"readCar","Args":["Car-01"]}'
-``
+```
 
 ***Build stopAutomobileNetwork.sh script file
 
-``
+```
 chmod +x stopAutomobileNetwork.sh
-``
-``
+```
+```
 ./stopAutomobileNetwork.sh
-``
+```
 
