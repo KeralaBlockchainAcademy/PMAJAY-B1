@@ -1,9 +1,9 @@
 #!/bin/bash
 
-docker-compose -f docker/docker-compose-3org.yaml down
+docker compose -f docker/docker-compose-3org.yaml down
 sleep 2
 
-docker-compose -f docker/docker-compose-ca.yaml down
+docker compose -f docker/docker-compose-ca.yaml down
 sleep 2
 
 docker rm -f $(docker ps -a | awk '($2 ~ /dev-peer.*/) {print $1}')
