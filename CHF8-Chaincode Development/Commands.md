@@ -1,10 +1,10 @@
 ***Build startAutomobileNetwork.sh script file
 
 ```
-chmod +x startAutomobileNetwork.sh
+chmod +x startAutomobileNetwork1.sh
 ```
 ```
-./startAutomobileNetwork.sh
+./startAutomobileNetwork1.sh
 ```
 
 ***To submit transaction as ManufacturerMSP
