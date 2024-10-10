@@ -9,7 +9,4 @@
 
   "test": "mocha --recursive",
 
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
-  },
+  

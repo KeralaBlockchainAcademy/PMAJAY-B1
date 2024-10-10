@@ -15,7 +15,7 @@ class CarContract extends Contract {
 
     async createCar(ctx, carId, make, model, color, dateOfManufacture, manufactureName) {
         const mspID = ctx.clientIdentity.getMSPID();
-        if (mspID === 'manufacturer-auto-com') {
+        if (mspID === 'ManufacturerMSP') {
             const exists = await this.carExists(ctx, carId);
             if (exists) {
                 throw new Error(`The car ${carId} already exists`);
@@ -51,7 +51,7 @@ class CarContract extends Contract {
 
     async deleteCar(ctx, carId) {
         const mspID = ctx.clientIdentity.getMSPID();
-        if (mspID === 'manufacturer-auto-com') {
+        if (mspID === 'ManufacturerMSP') {
             const exists = await this.carExists(ctx, carId);
             if (!exists) {
                 throw new Error(`The car ${carId} does not exist`);
