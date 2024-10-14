@@ -1,0 +1,83 @@
+async queryAllCars(ctx) {
+        const queryString = {
+            selector: {
+                assetType: 'car'
+            }
+        };
+
+        let resultIterator = await ctx.stub.getQueryResult(JSON.stringify(queryString));
+        let result = await this._getAllResults(resultIterator);
+        return JSON.stringify(result)
+
+    }
+
+
+async getCarsByRange(ctx, startKey, endKey) {
+        let resultIterator = await ctx.stub.getStateByRange(startKey, endKey);
+        let result = await this._getAllResults(resultIterator);
+        return JSON.stringify(result)
+    }
+
+
+    async _getAllResults(iterator) {
+        let allResult = [];
+
+        let res = await iterator.next();
+        while (!res.done) {
+            if (res.value && res.value.value.toString()) {
+                let jsonRes = {};
+                
+                    jsonRes.Key = res.value.key;
+                    jsonRes.Record = JSON.parse(res.value.value.toString());
+                
+                allResult.push(jsonRes)
+            }
+            res = await iterator.next()
+        }
+        await iterator.close()
+        return allResult
+    }
+
+****Order Contract
+
+
+async queryAllOrders(ctx) {
+        const queryString = {
+            selector: {
+                assetType: 'order'
+            }
+        };
+        const collectionName = await getCollectionName(ctx);
+        let resultIterator = await ctx.stub.getPrivateDataQueryResult(collectionName, JSON.stringify(queryString));
+        let result = await this._getAllResults(resultIterator.iterator);
+        return JSON.stringify(result)
+    }
+
+
+
+async getOrdersByRange(ctx, startKey, endKey) {
+        const collectionName = await getCollectionName(ctx);
+        let resultIterator = await ctx.stub.getPrivateDataByRange(collectionName, startKey, endKey);
+        let result = await this._getAllResults(resultIterator.iterator);
+        return JSON.stringify(result)
+    }
+
+
+async _getAllResults(iterator) {
+        let allResult = [];
+
+        let res = await iterator.next();
+        while (!res.done) {
+            if (res.value && res.value.value.toString()) {
+                let jsonRes = {};
+                jsonRes.Key = res.value.key;
+                jsonRes.Record = JSON.parse(res.value.value.toString());
+                allResult.push(jsonRes)
+            }
+            res = await iterator.next()
+        }
+        iterator.close()
+        return allResult
+    }
+
+
