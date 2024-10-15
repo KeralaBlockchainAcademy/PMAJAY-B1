@@ -217,3 +217,15 @@ peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.aut
 ```bash
 peer chaincode query -C $CHANNEL_NAME -n KBA-Automobile -c '{"function":"readCar","Args":["Car-01"]}'
 ```
+
+
+
+```bash
+    async _queryAllOrdersWithQueryString(ctx, queryString) {
+        const collectionName = await getCollectionName(ctx);
+        let resultIterator = await ctx.stub.getPrivateDataQueryResult(collectionName, JSON.stringify(queryString));
+        let result = await this._getAllResults(resultIterator.iterator);
+        return JSON.stringify(result);
+
+    }
+```
