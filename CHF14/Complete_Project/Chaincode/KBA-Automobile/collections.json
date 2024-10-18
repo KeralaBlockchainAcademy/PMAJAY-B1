@@ -1,0 +1,10 @@
+[
+    {
+        "name": "CollectionOrder",
+        "policy": "OR('manufacturer-auto-com.member', 'dealer-auto-com.member')",
+        "requiredPeerCount": 1,
+        "maxPeerCount": 1,
+        "blockToLive": 1000,
+        "memberOnlyRead": true
+    }
+]

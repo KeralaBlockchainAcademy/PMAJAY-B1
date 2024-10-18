@@ -1,0 +1,179 @@
+<head>
+<div class="px-3 py-2 bg-secondary text-white">
+    <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <h2 href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+        <svg class="bi d-block mx-auto mb-1 " width="24" height="24"></svg>
+        {{title}}          
+        </h2>
+    <a type="button" class="btn btn-success filled " onClick="getEvent()" class="nav-link text-white">
+    Notifications
+    </a>        
+    <a type="button" class="btn btn-danger filled marginLeft " href="/" class="nav-link text-white">
+    Logout
+    </a>
+                
+    </div>
+    </div>
+</div> 
+</head>
+</br>
+<div class="jumbotron jumbotronManufacturer jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Manufacturer Dashboard</h1>
+    <p class="lead"> 
+    Companies in the Car and Automobile Manufacturing industry manufacture cars and automobile chassis. These operators, which are referred to as automakers, typically produce cars, including electric cars, in assembly plants.
+    <mark>Manufacturer</mark> are one of the major players in the automobile industry.</p>
+  </div>
+</div>
+</br>
+<div class="container-fluid">
+    <div class="row rowBox" >
+        <div class="col-md-3 col-sm-12"></div>
+
+        <div class="col-md-6 col-sm-12">
+
+            <div class="card card-shadow">
+                <div class="card-header" style="background-color:tomato">
+                    <legend class="text-center" data-bs-toggle="collapse" href="#collapseQueryAdd" role="button" aria-expanded="false" aria-controls="collapseExample">Add a new Car</legend>
+                </div>
+                <div class="form-modal">
+                <div class="card-body collapse" id="collapseQueryAdd">
+                    <form id="manForm">
+                        <div class="row" >
+                            <div class="col-md-12 col-sm-12" class="form-group">
+                            <a>Vin Number</a>
+                            <label for="vinNumber" class="form-label mt-4"></label>
+                            <input type="text" class="form-control" id="vinNumber" aria-describedby="vinNumber" placeholder="001">
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-md-12 col-sm-12" class="form-group">
+                            <a>Car Make</a>
+                            <label for="carMake" class="form-label mt-4"></label>
+                            <input type="text" class="form-control" id="carMake" aria-describedby="carMake" placeholder="Tata">
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-md-12 col-sm-12" class="form-group">
+                            <a>Car model</a>
+                            <label for="carModel" class="form-label mt-4"></label>
+                            <input type="text" class="form-control" id="carModel" aria-describedby="carModel" placeholder="Tiago">
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-md-12 col-sm-12" class="form-group">
+                            <a>Car Colour</a>
+                            <label for="carColour" class="form-label mt-4"></label>
+                            <input type="text" class="form-control" id="carColour" aria-describedby="carColour" placeholder="Black">
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-md-12 col-sm-12" class="form-group">
+                            <a>Date of manufacture</a>
+                            <label for="dom" class="form-label mt-4"></label>
+                            <input type="date" class="form-control" onfocus="(this.type='date')" id="dom" aria-describedby="dom" placeholder="22/06/2021">
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-md-12 col-sm-12" class="form-group">
+                            <a>Manufacturer Name</a>
+                            <label for="manName" class="form-label mt-4"></label>
+                            <input type="text" class="form-control" id="manName" aria-describedby="manName" placeholder="Tata Automobiles">
+                            </div>
+                        </div>      
+                        </br>
+                        <div class="row" >
+                            <div class="col-md-12 col-sm-12" >
+                                <button type="button" onclick="ManWriteData(event)" class="btn btn-secondary rounded-pill">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12"> 
+        </div>
+
+    </div>
+</div>
+</br>
+<div class="container-fluid">
+    <div class="row rowBox" >
+        <div class="col-md-3 col-sm-12"></div>
+        <div class="col-md-6 col-sm-12">
+            <div class="card card-shadow">
+                <div class="card-header" style="background-color:tomato">
+                    <legend class="text-center" data-bs-toggle="collapse" href="#collapseQueryRead" role="button" aria-expanded="false" aria-controls="collapseExample">Get Details of a Specific Car</legend>
+                </div>
+                <div class="card-body collapse"  id="collapseQueryRead">
+                    <form>
+                        <div class="row .navbar-brand" >
+                            <div class="col-md-12 col-sm-12" class="form-group">
+                            <a>Vin Number</a>
+                            <label for="QueryVinNumbMan" class="form-label mt-4"></label>
+                            <input type="text" class="form-control" id="QueryVinNumbMan" aria-describedby="QueryVinNumbMan" placeholder="001">
+                            </div>
+                        </div>
+                        </br>
+                        <button type="submit" onclick="ManQueryData(event)" class="btn btn-fill btn-secondary rounded-pill">Submit</button></br>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12"></div>
+    </div>
+</div>
+</br>
+
+<div class="container-fluid">
+    <div class="row rowBox" >
+        <div class="col-md-3 col-sm-12"></div>
+        <div class="col-md-6 col-sm-12">
+            <div class="card">
+                <div class="card-header" style="background-color:tomato">
+                    <legend class="text-center" >Cars in Factory</legend>
+                </div>
+                <div class="card-body">
+                   <div class="table-container">
+      <table class="table" style="width:100%">
+          <thead id="colored-table">
+              <th>CarId</th>
+              <th>Color</th>
+              <th>Make</th>
+              <th>Model</th>
+              <th>Owner</th>
+              <th>Status</th>
+              <th> </th>
+          </thead>
+          <tbody>
+              {{#each itemList}}
+              {{#ifequals this.Record.status "In Factory"}}
+              <tr>
+                  <td>{{this.Key}}</td>
+                  <td>{{this.Record.color}}</td>
+                  <td>{{this.Record.make}}</td>
+                  <td>{{this.Record.model}}</td>
+                  <td>{{this.Record.ownedBy}}</td>
+                  <td>{{this.Record.status}}</td>
+                  <td><button class="btn btn-success filled" onClick="getMatchingOrders('{{this.Key}}');">Get Matching Orders</button></td>
+
+              </tr>
+              {{/ifequals}}
+              {{/each}}
+          </tbody>
+      </table>
+  </div> 
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12"></div>
+
+    </div>
+</div>
+</br>
+
+<script type="text/javascript" src='/javascripts/main.js'></script>
+

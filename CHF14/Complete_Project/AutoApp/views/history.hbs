@@ -1,0 +1,54 @@
+<div class="px-3 py-2 bg-secondary text-white">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <h2 href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                <svg class="bi d-block mx-auto mb-1 " width="24" height="24"></svg>
+                {{title}}
+            </h2>
+            <a type="button" href="/mvd" class="btn btn-danger filled" class="nav-link text-white">
+                Back to MVD Dashboard
+            </a>
+            <a type="button" href="/" class="btn btn-danger filled marginLeft" class="nav-link text-white">
+                Logout
+            </a>
+        </div>
+    </div>
+</div>
+</br>
+
+<div class="row">
+    <div class="table-container">
+        <table class="table" style="width:100%">
+            <thead id="colored-table">
+                <th>Make</th>
+                <th>Model</th>
+                <th>Color</th>
+                <th>DOM</th>
+                <th>Status</th>
+                <th>Owner</th>
+                <th>AssetType</th>
+            </thead>
+            <tbody>
+                {{#each itemList}}
+                <tr>
+                    <td>{{this.Record.make}}</td>
+                    <td>{{this.Record.model}}</td>
+                    <td>{{this.Record.color}}</td>
+                    <td>{{this.Record.dateOfManufacture}}</td>
+                    <td>{{this.Record.status}}</td>
+                    <td>{{this.Record.ownedBy}}</td>
+                    <td>{{this.Record.assetType}}</td>
+
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<script type="text/javascript" src='/javascripts/main.js'></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

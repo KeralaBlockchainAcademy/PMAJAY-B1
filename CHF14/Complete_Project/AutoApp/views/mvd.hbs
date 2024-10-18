@@ -1,0 +1,239 @@
+<div class="px-3 py-2 bg-secondary text-white">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <h2 href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                <svg class="bi d-block mx-auto mb-1 " width="24" height="24"></svg>
+                {{title}}
+            </h2>
+            <a type="button" class="btn btn-danger filled" href="/" class="nav-link text-white">
+                Logout
+            </a>
+        </div>
+    </div>
+</div>
+</br>
+<div class="jumbotron jumbotronMvd jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">MVD Dashboard</h1>
+        <p class="lead"> <mark>MVD</mark> records, controls and monitors the moves made by both Dealers and
+            Manufacturers.</p>
+    </div>
+</div>
+</br>
+<div class="container-fluid">
+    <div class="row rowBox">
+        <div class="card card-shadow">
+            <div class="card-header" style="background-color:rgb(173, 186, 192)">
+                <legend class="text-center">Complete Car List</legend>
+            </div>
+            <div class="card-body">
+                <div class="table-container">
+                    <table class="table" style="width:100%">
+                        <thead id="colored-table">
+                            <th>CarId</th>
+                            <th>AssetType</th>
+                            <th>Color</th>
+                            <th>DOM</th>
+                            <th>Make</th>
+                            <th>Model</th>
+                            <th>Owner</th>
+                            <th>Status</th>
+                            <th> </th>
+                        </thead>
+                        <tbody>
+                            {{#each itemList}}
+                            <tr>
+                                <td>{{this.Key}}</td>
+                                <td>{{this.Record.assetType}}</td>
+                                <td>{{this.Record.color}}</td>
+                                <td>{{this.Record.dateOfManufacture}}</td>
+                                <td>{{this.Record.make}}</td>
+                                <td>{{this.Record.model}}</td>
+                                <td>{{this.Record.ownedBy}}</td>
+                                <td>{{this.Record.status}}</td>
+                                <td><button class="btn btn-danger filled" onClick="getItemHistory('{{this.Key}}');">Get
+                                        history</button></td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</br>
+<div class="container-fluid">
+    <div class="row rowBox">
+        <div class="col-md-12 col-sm-12">
+            <div class="card card-shadow">
+                <div class="card-header" style="background-color:wheat">
+                    <legend class="text-center">Already Registered</legend></br>
+                </div>
+                <div class="card-body"></div>
+                <div class="row rowBox">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="table-container">
+                            <table class="table" style="width:100%">
+                                <thead id="colored-table">
+                                    {{!-- <th>Car Id</th> --}}
+                                    <th>CarId</th>
+                                    {{!-- <th>Next Station</th> --}}
+                                    <th>Color</th>
+                                    <th>DOM</th>
+                                    <th>Make</th>
+                                    <th>Model</th>
+                                    <th>Owner</th>
+                                    <th>Status</th>
+                                    <th> </th>
+                                </thead>
+                                <tbody>
+                                    {{#each itemList}}
+                                    {{#checkRegistered this.Record.status "Registered"}}
+                                    <tr>
+                                        <td>{{this.Key}}</td>
+                                        <td>{{this.Record.color}}</td>
+                                        <td>{{this.Record.dateOfManufacture}}</td>
+                                        <td>{{this.Record.make}}</td>
+                                        <td>{{this.Record.model}}</td>
+                                        <td>{{this.Record.ownedBy}}</td>
+                                        <td>{{this.Record.status}}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger filled" data-toggle="modal"
+                                                data-target="#registerModal" data-id={{this.Key}}>Re-Register</button>
+                                        </td>
+                                        </td>
+                                    </tr>
+                                    {{/checkRegistered}}
+                                    {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</br>
+<div class="container-fluid">
+    <div class="row rowBox">
+        <div class="col-md-12 col-sm-12">
+            <div class="card card-shadow">
+                <div class="card-header" style="background-color:wheat">
+                    <legend class="text-center">Pending For Registration</legend></br>
+                </div>
+                <div class="table-container">
+                    <table class="table" style="width:100%">
+                        <thead id="colored-table">
+                            <th>CarId</th>
+                            <th>AssetType</th>
+                            <th>Color</th>
+                            <th>DOM</th>
+                            <th>Make</th>
+                            <th>Model</th>
+                            <th>Owner</th>
+                            <th>Status</th>
+                            <th> </th>
+                        </thead>
+                        <tbody>
+                            {{#each itemList}}
+                            {{#ifequals this.Record.status "Assigned to a Dealer"}}
+                            <tr>
+                                <td>{{this.Key}}</td>
+                                <td>{{this.Record.assetType}}</td>
+                                <td>{{this.Record.color}}</td>
+                                <td>{{this.Record.dateOfManufacture}}</td>
+                                <td>{{this.Record.make}}</td>
+                                <td>{{this.Record.model}}</td>
+                                <td>{{this.Record.ownedBy}}</td>
+                                <td>{{this.Record.status}}</td>
+                                <td>
+                                    <button type="button" class="btn btn-danger filled" data-toggle="modal"
+                                        data-target="#registerModal" data-id={{this.Key}}>Register</button>
+                                </td>
+                            </tr>
+                            {{/ifequals}}
+                            {{/each}}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="registerModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Register Car</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-modal">
+                    <div class="card-body">
+                        <form id="manForm">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12" class="form-group">
+                                    <a>Car ID</a>
+                                    <label for="QVinNumb" class="form-label mt-4"></label>
+                                    <input type="text" class="form-control" id="QVinNumb" aria-describedby="QVinNumb"
+                                        placeholder="001">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12" class="form-group">
+                                    <a>Car Owner</a>
+                                    <label for="carOwner" class="form-label mt-4"></label>
+                                    <input type="text" class="form-control" id="carOwner" aria-describedby="carOwner"
+                                        placeholder="John Doe">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12" class="form-group">
+                                    <a>Registration Number</a>
+                                    <label for="regNumber" class="form-label mt-4"></label>
+                                    <input type="text" class="form-control" id="regNumber" aria-describedby="regNumber"
+                                        placeholder="KL-01-AZ-1234">
+                                </div>
+                            </div>
+
+                            </br>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <button type="button" onclick="RegisterCar(event)"
+                                        class="btn btn-fill btn-secondary rounded-pill">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onClick="reloadWindow()"
+                    data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    {
+        { !--$(function () { --}}
+        $('#myModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget); // Button that triggered the modal
+            var QVinNumb = button.data('QVinNumb');
+            var modal = $(this);
+            modal.find('#QVinNumb').val(QVinNumb);
+        });
+        { { !-- }); --}
+    }
+</script>
+
+<script type="text/javascript" src='/javascripts/main.js'></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

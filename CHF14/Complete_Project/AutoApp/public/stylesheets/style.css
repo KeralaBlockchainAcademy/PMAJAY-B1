@@ -1,0 +1,84 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.marginLeft{
+margin-left: 10px;
+}
+.rowBox {
+  padding: 3px;
+}
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+/* hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+} */
+.jumbotronManufacturer {
+  background: linear-gradient(white, tomato);
+  background-size: cover;
+}
+
+.jumbotronDealer {
+  background: linear-gradient(white, teal);
+  background-size: cover;
+}
+
+.jumbotronMvd {
+  background: linear-gradient(white, wheat);
+  background-size: cover;
+}
+.rcorners {
+  border-radius: 25px;
+  border: 2px solid black;
+  padding: 20px;
+  /* width: 500px; */
+  /* height: 500px; */
+}
+.card-shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.form-control-dark {
+  margin: 10px;
+  border: 2px solid blue;
+  color: grey;
+  background-color: white;
+  border-color: var(--bs-gray);
+}
+.form-control-dark:focus {
+  color: #fff;
+  background-color: var(--bs-dark);
+  border-color: #fff;
+  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+.text-center {
+  text-align: center;
+}
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.text-small {
+  font-size: 85%;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}

@@ -1,0 +1,158 @@
+Organizations:
+  - &OrdererOrg
+    Name: OrdererOrg
+    ID: OrdererMSP
+    MSPDir: ../organizations/ordererOrganizations/auto.com/msp
+    Policies:
+      Readers:
+        Type: Signature
+        Rule: "OR('OrdererMSP.member')"
+      Writers:
+        Type: Signature
+        Rule: "OR('OrdererMSP.member')"
+      Admins:
+        Type: Signature
+        Rule: "OR('OrdererMSP.admin')"
+    OrdererEndpoints:
+      - orderer.auto.com:7050
+  - &Manufacturer
+    Name: manufacturer-auto-com
+    ID: manufacturer-auto-com
+    MSPDir: ../organizations/peerOrganizations/manufacturer.auto.com/msp
+    Policies:
+      Readers:
+        Type: Signature
+        Rule: "OR('manufacturer-auto-com.admin', 'manufacturer-auto-com.peer', 'manufacturer-auto-com.client')"
+      Writers:
+        Type: Signature
+        Rule: "OR('manufacturer-auto-com.admin', 'manufacturer-auto-com.client')"
+      Admins:
+        Type: Signature
+        Rule: "OR('manufacturer-auto-com.admin')"
+      Endorsement:
+        Type: Signature
+        Rule: "OR('manufacturer-auto-com.peer')"
+  - &Dealer
+    Name: dealer-auto-com
+    ID: dealer-auto-com
+    MSPDir: ../organizations/peerOrganizations/dealer.auto.com/msp
+    Policies:
+      Readers:
+        Type: Signature
+        Rule: "OR('dealer-auto-com.admin', 'dealer-auto-com.peer', 'dealer-auto-com.client')"
+      Writers:
+        Type: Signature
+        Rule: "OR('dealer-auto-com.admin', 'dealer-auto-com.client')"
+      Admins:
+        Type: Signature
+        Rule: "OR('dealer-auto-com.admin')"
+      Endorsement:
+        Type: Signature
+        Rule: "OR('dealer-auto-com.peer')"
+
+  - &Mvd
+    Name: mvd-auto-com
+    ID: mvd-auto-com
+    MSPDir: ../organizations/peerOrganizations/mvd.auto.com/msp
+    Policies:
+      Readers:
+        Type: Signature
+        Rule: "OR('mvd-auto-com.admin', 'mvd-auto-com.peer', 'mvd-auto-com.client')"
+      Writers:
+        Type: Signature
+        Rule: "OR('mvd-auto-com.admin', 'mvd-auto-com.client')"
+      Admins:
+        Type: Signature
+        Rule: "OR('mvd-auto-com.admin')"
+      Endorsement:
+        Type: Signature
+        Rule: "OR('mvd-auto-com.peer')"
+
+Capabilities:  
+  Channel: &ChannelCapabilities
+    V2_0: true
+  Orderer: &OrdererCapabilities
+    V2_0: true
+  Application: &ApplicationCapabilities
+    V2_5: true
+    
+Application: &ApplicationDefaults
+  Organizations:
+  Policies:
+    Readers:
+      Type: ImplicitMeta
+      Rule: "ANY Readers"
+    Writers:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+    Admins:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Admins"
+    LifecycleEndorsement:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Endorsement"
+    Endorsement:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Endorsement"
+  Capabilities:
+    <<: *ApplicationCapabilities
+
+Orderer: &OrdererDefaults
+  Addresses:
+    - orderer.auto.com:7050
+  BatchTimeout: 2s
+  BatchSize:
+    MaxMessageCount: 10
+    AbsoluteMaxBytes: 99 MB
+    PreferredMaxBytes: 512 KB
+  Organizations:
+  Policies:
+    Readers:
+      Type: ImplicitMeta
+      Rule: "ANY Readers"
+    Writers:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+    Admins:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Admins"
+    BlockValidation:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+
+Channel: &ChannelDefaults
+  Policies:
+    Readers:
+      Type: ImplicitMeta
+      Rule: "ANY Readers"
+    Writers:
+      Type: ImplicitMeta
+      Rule: "ANY Writers"
+    Admins:
+      Type: ImplicitMeta
+      Rule: "MAJORITY Admins"
+  Capabilities:
+    <<: *ChannelCapabilities
+
+Profiles:
+  ThreeOrgsChannel:
+    <<: *ChannelDefaults
+    Orderer:
+      <<: *OrdererDefaults
+      OrdererType: etcdraft
+      EtcdRaft:
+        Consenters:
+          - Host: orderer.auto.com
+            Port: 7050
+            ClientTLSCert: ../organizations/ordererOrganizations/auto.com/orderers/orderer.auto.com/tls/server.crt
+            ServerTLSCert: ../organizations/ordererOrganizations/auto.com/orderers/orderer.auto.com/tls/server.crt
+      Organizations:
+        - *OrdererOrg
+      Capabilities: *OrdererCapabilities
+    Application:
+      <<: *ApplicationDefaults
+      Organizations:
+        - *Manufacturer
+        - *Dealer
+        - *Mvd
+      Capabilities: *ApplicationCapabilities

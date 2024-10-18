@@ -1,0 +1,118 @@
+
+{{!-- Navigation  --}}
+<head>
+<div class="px-3 py-2 bg-secondary text-white">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <h2 href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+      <svg class="bi d-block mx-auto mb-1 " width="24" height="24"></svg>
+      {{title}}          
+      </h2>
+    <a type="button" class="btn btn-danger filled" data-toggle="modal" data-target="#selectModal" class="nav-link text-white">
+    Login
+    </a>               
+    </div>
+  </div>
+</div>
+</head>
+
+
+{{!-- List of all assets --}}
+
+<div id="selectModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Login as..</h4>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-modal">
+            <div class="container-fluid">
+                <div class="row rowBox" >
+                <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                    <a href="/manufacturer" class="thumbnail center">
+                        <img src="images/manufacturer.png" width="100" height="100" alt="...">
+                    </a>
+                    <h5 class="text-center">Manufacturer</h5>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                    <a href="/dealer" class="thumbnail center">
+                        <img src="images/dealer.png" width="100" height="100" alt="...">
+                    </a>
+                    <h5 class="text-center">Dealer</h5>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                    <a href="/mvd" class="thumbnail center">
+                        <img src="images/mvd.png" width="100" height="100" alt="...">
+                    </a>
+                    <h5 class="text-center">MVD</h5>
+                    </div>                
+                </div>
+            </div>
+            </div>          
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Automobile Consortium</h1>
+    <p class="lead"> The automobile consortium is a group of entities such as <mark>Manufacturer</mark>, <mark>Dealer</mark> and <mark>MVD</mark> towards a common goal of achieving immutability, transparency and privacy on the automobile industry</p>
+  </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row rowBox" >
+      <div class="card card-shadow">
+        <div class="card-header" style="background-color:rgb(173, 186, 192)">
+            <legend class="text-center">Complete Car List</legend>
+        </div>
+        <div class="card-body" >
+          <div class="table-container">
+              <table class="table" style="width:100%">
+                  <thead id="colored-table">
+                      <th>CarId</th>
+                      <th>AssetType</th>
+                      <th>Color</th>
+                      <th>DOM</th>
+                      <th>Make</th>
+                      <th>Model</th>
+                      <th>Owner</th>
+                      <th>Status</th>
+                      <th> </th>
+                  </thead>
+                  <tbody>
+                      {{#each itemList}}
+                      <tr>
+                          <td>{{this.Key}}</td>
+                          <td>{{this.Record.assetType}}</td>
+                          <td>{{this.Record.color}}</td>
+                          <td>{{this.Record.dateOfManufacture}}</td>
+                          <td>{{this.Record.make}}</td>
+                          <td>{{this.Record.model}}</td>
+                          <td>{{this.Record.ownedBy}}</td>
+                          <td>{{this.Record.status}}</td>
+                          {{!-- <td><button class="btn btn-danger filled" onClick="getItemHistory('{{this.Key}}');">Get history</button></td> --}}
+                      </tr>
+                      {{/each}}
+                  </tbody>
+              </table>
+          </div>
+        </div>    
+      </div>
+  </div>
+</div>
+<script type="text/javascript" src='/javascripts/main.js'></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
