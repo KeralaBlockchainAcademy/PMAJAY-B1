@@ -1,0 +1,18 @@
+test:
+   name: basic-contract-benchmark
+   description: test benchmark
+   workers:
+     number: 2
+   rounds:
+     - label: readcar
+       description: Read car benchmark
+       txDuration: 20
+       rateControl:
+         type: fixed-load
+         opts:
+           transactionLoad: 2
+       workload:
+         module:  Workload/readcar.js
+         arguments:
+           assets: 10
+           contractId: KBA-Automobile
