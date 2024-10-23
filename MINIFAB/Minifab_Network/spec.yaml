@@ -1,0 +1,22 @@
+fabric:
+  cas:
+  - "ca1.manufacturer.auto.com"
+  - "ca1.dealer.auto.com"
+  - "ca1.mvd.auto.com"
+  peers: 
+  - "peer1.manufacturer.auto.com"
+  #- "peer2.org0.auto.com"
+  - "peer1.dealer.auto.com"
+ # - "peer2.org1.auto.com"
+  - "peer1.mvd.auto.com"
+  orderers:
+  - "orderer1.auto.com"
+  - "orderer2.auto.com"
+  - "orderer3.auto.com"
+  settings:
+    ca:
+      FABRIC_LOGGING_SPEC: DEBUG
+    peer:
+      FABRIC_LOGGING_SPEC: DEBUG
+    orderer:
+      FABRIC_LOGGING_SPEC: DEBUG
